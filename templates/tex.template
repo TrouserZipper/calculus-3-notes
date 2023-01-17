@@ -1,0 +1,8 @@
+\documentclass[12pt]{standalone}
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+\begin{document}
+
+\end{document}
