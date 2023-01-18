@@ -1,8 +1,0 @@
-\documentclass[12pt]{article}
-
-\usepackage{graphicx}
-\graphicspath{ {./images/} } 
-
-\begin{document}
-
-\end{document}
