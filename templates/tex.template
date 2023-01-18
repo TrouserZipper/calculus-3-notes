@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 \documentclass[12pt]{standalone}
 
 \usepackage{pgfplots}
 \pgfplotsset{compat=newest}
+=======
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} } 
+>>>>>>> 5275e53 (things)
 
 \begin{document}
 
