@@ -1,14 +1,13 @@
-<<<<<<< HEAD
-\documentclass[12pt]{standalone}
-
-\usepackage{pgfplots}
-\pgfplotsset{compat=newest}
-=======
 \documentclass[12pt]{article}
 
+\usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{graphicx}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+
 \graphicspath{ {./images/} } 
->>>>>>> 5275e53 (things)
 
 \begin{document}
 
