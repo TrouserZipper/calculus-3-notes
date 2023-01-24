@@ -6,6 +6,7 @@
 
 \counterwithin*{equation}{section}
 \counterwithin*{equation}{subsection}
+\addtolength\parskip{\bigskipamount}
 
 \graphicspath{ {./images/} } 
 
