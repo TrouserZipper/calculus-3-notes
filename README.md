@@ -1,5 +1,5 @@
-My calculus-3 notes in TeX language.\n
-I did not install any additional packages beyond what was already included in my LaTeX installation.\n
+My calculus-3 notes in TeX language.\\
+I did not install any additional packages beyond what was already included in my LaTeX installation.
 
 For now, to use it, simply render each file individually. 
 
