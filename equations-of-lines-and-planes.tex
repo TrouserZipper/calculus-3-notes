@@ -86,15 +86,22 @@ The normal vector is a vector which is orthogonal to any line on the plane, and 
 We can use two vectors, \(\vec{r}\) and  \( \vec{r_0} \) to point to the points \(P_0\) and \(P\) respectively. This is represented in the figure below.
 
 \begin{tikzpicture}[scale=3]
-	\clip (-0.1,-0.1) rectangle (1.1,0.75);
+	\clip (-0.1,-0.1) rectangle (1.5,1.5);
 	\draw[step=0.5cm,style=grid lines] (-1.4,-1.4) grid (1.4,1.4);	
 	\draw[<->] (-1.5,0) -- (1.5,0);
 	\draw[<->] (0,-1.5,0) -- (0,1.5,0);
+
+	\foreach \x in {-1,-0.5,0.5,1}
+		\draw (\x,1pt) -- (\x,-1pt);
+	\foreach \y in {-1,-0.5,0.5,1}
+		\draw (1pt,\y) -- (-1pt,\y);
+
 	\draw (0,0) circle (1cm);
 	\filldraw[fill=green!20!white,draw=green!50!black](0,0) -- (3mm,0) arc (0:30:3mm) -- cycle;
 	\draw[very thick,red] (30:1cm) -- (30:1cm |- 0,0);
 	\draw[very thick,blue] (0,0) -- (30:1cm |- 0,0); 
 	\draw[very thick, orange] (0.5,0) -- (intersection of 0.5,0--0.5,1 and 0,0--30:1cm);
+	\draw (0,0) -- (30:1cm);
 \end{tikzpicture}.
 
 \subsection{Incomplete do later}
