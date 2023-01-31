@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\addtolength\parskip{\bigskipamount}
+
+\graphicspath{ {./images/} } 
+
+\begin{document}
+\section{Derivative of a Parametric Function in a 3-Dimensional Space}
+\subsection{Theorem 1}
+
+\subsection{Theorem 2}
+\(\vec{r} '(t) = <f'(t),g'(t),h'(t)> \) \\%
+\underline{Proof:} 
+\begin{align}
+	\label{eq:Derivative of parametric function r(t) }
+	\vec{r} '(t) =  	
+\end{align}
+
+\subsection{Derivative of a Parametric Function Example 1}
+Consider \(\vec{r} (t) = te^{-t}\hat{i} + \sin(2t)\hat{j}+(1+t^3)\hat{k} \)   \\%
+Find the unit tangent vector when \(t=0\) .
+\begin{align}
+	\vec{r}\ '(t)=(e^{-t}-te^{-t})\hat{i} + 2\cos(2t)\hat{j} + 3t^2\hat{k} 
+\end{align}
+\subsection{Derivative of a Parametric Function Example 2}
+Let \(\vec{r} (t) = (2-t)\hat{i} + \sqrt{t}\hat{j} \) \\%
+Sketch the curve, \(\vec{r} (1) \) and \(\vec{r} \ '(1) \). 
+\begin{align}
+	\label{eq:Example 2 - Derivative of Parametric Function}
+	x=2-t \rightarrow t=2-x \\%
+	\rightarrow y=\sqrt{2-x}=\sqrt{-(x-2)}	\\%
+	\vec{r} (1) = <1,1> 
+\end{align}
+
+\subsection{Derivative of a Parametric Function Example 3}	
+Find parametric equations for the tangent line to the curve:\\%
+\(x=\sin(t),y=t,z=2\cos(t)\) at the point \((1,\frac{\pi}{2},0)\). \\%
+Notice that \(y=t  \rightarrow t = \frac{\pi}{2}\).
+\begin{align}
+	\vec{r} (t)=<\sin(t),t,2\cos(t)>\\%
+	\vec{r} \ '(t) = <\cos(t),1,-2\sin(t)> 
+\end{align}
+
+\subsection{Differentiation Rules}
+\begin{enumerate}
+	\item \(\frac{d}{dt}[\vec{u} (t)  +\vec{v} (t)\ = \vec{u} \ '(t) + \vec{v}\ '(t)   \) 
+	\item \(\frac{d}{dt}[c \vec{u} (t)] = c \vec{u} \ '(t)  \) 
+	\item \(\frac{d}{dt}[f(t) \vec{u}(t)] = f'(t)\vec{u} (t) + f(t)\vec{u} \ '(t)    \) 
+	\item \(\frac{d}{dt}[\vec{u} (r)\cdot \vec{v} (t)] = \vec{u} \ '(t)\cdot \vec{v} (t)+ \vec{u} (t) \cdot \vec{v} \ '(t)       \) 
+\end{enumerate}
+
+\subsection{Proof of (4)}
+\begin{align}
+	\vec{u} (t)	= <f_1(t),f_2(t),f_3(t)> 
+\end{align}
+\subsection{Derivative of a Parametric Function Example 3}
+Suppose \(|\vec{r} \ '(t)| = c\) , a constant. Show \(\vec{r} \ '(t) \) in \underline{orthogonal} to \(\vec{r} (t) \) for all \(t\).
+
+\begin{align}
+	|\vec{r} (t)|^2 = c^2\\%
+	\vec{r} (t)	\cdot \vec{r} (t) = c^2\\%
+	\frac{d}{dt}: \vec{r} \ '(t) \cdot \vec{r} (t) + \vec{r} (t) \cdot \vec{r} \ '(t) = 0   \\% 
+	2vec	r	\ '(t) \cdot \vec{r} (t) = 0\\%
+	\vec{r} \ '(t) \cdot \vec{r} (t) = 0
+\end{align}
+\(\therefore \vec{r} \ '(t) \) is orthogonal to \(\vec{r} (t) \) 
+
+\section{Integral of a Parametric Function in a 3-Dimensiona Space}
+\end{document}
+
