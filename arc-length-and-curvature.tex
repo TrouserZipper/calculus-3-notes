@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\addtolength\parskip{\bigskipamount}
+
+\graphicspath{ {./images/} } 
+
+\begin{document}
+\section{Arc Length}
+
+\underline{Before:} displacement = \(\int_{a}^{b} v(t)dt\) \\%
+distance = \(\int_{a}^{b} |v(t)|dt\)\
+
+\underline{Now}: \(\vec{r} (t) = \) position at time t\\%
+\(\vec{v} (t) = \vec{r}\ '(t) =    \) velocity at time t\\%
+\(|\vec{v} (t)| \) = speed at time t\\%
+\(\vec{a} (t) = \vec{v}\ '(t) = \vec{r}\ ''(t)   \) 
+
+Draw model\\%
+Arc Length = \(L =\int_{a}^{b} |\vec{r}\ '(t) |dt\) 
+
+\subsection{Arc Length Example 2}
+Find the length of the arc of the space curve from the point \(P(0,0,1)\) to \(Q(0,2\pi,1)\) where \(\vec{r} (t) = \sin(t)\hat{i} + t\hat{j} + \cos(t)\hat{k} \) 
+
+\subsection{Multiple Parametrizations}
+\(\vec{r_1} (t) = <t^2,t^3,t>\) where \( 1\leq t\leq 2 \) \\%
+\(\vec{r_2} (t) = <e^{2u},e^{3u},e^u>  \) where \(0 \leq u \leq \ln{2}\) 
+
+\(\int_{1}^{2} |\vec{r_1}\ ' (t)| dt = \int_{0}^{\ln{2}} |r^{'}_2(t)|dt\) 
+
+\underline{Idea:} Arc Length is indepedent of the parametrization.
+
+\subsection{Arc Length Function}
+Suppose we have curve \(C: \vec{r} (t) \) where \(a\leq t\leq b\)  , then its \underline{arc length function} is:\\%
+\(s(t) = \int_{a}^{t} |\vec{r}\ '(u) |du = \) arc length traveled at time t
+
+Use the FTC 1, we see that \(\frac{ds}{dt}= \frac{d}{dt}\int_{a}^{t} |\vec{r}\ '(u) |du\) 
+
+\subsection{Arc Length Example 2}
+Consider \(\vec{r} (t) = \sin(t) \hat{i} + t\hat{j} + \cos(t)\hat{k}\) \\%
+Reparametrize \(\vec{r} (t) \) with respect to arc length measured from \((0,0,1)\) in the direction of increasing \(t\). 
+\end{document}
+
