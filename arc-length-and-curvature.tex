@@ -25,8 +25,14 @@ distance = \(\int_{a}^{b} |v(t)|dt\)\
 Draw model\\%
 Arc Length = \(L =\int_{a}^{b} |\vec{r}\ '(t) |dt\) 
 
-\subsection{Arc Length Example 2}
+\subsection{Arc Length Example 1}
 Find the length of the arc of the space curve from the point \(P(0,0,1)\) to \(Q(0,2\pi,1)\) where \(\vec{r} (t) = \sin(t)\hat{i} + t\hat{j} + \cos(t)\hat{k} \) 
+\begin{align}
+	t=y \rightarrow 0 \leq	t \leq	2\pi\\%
+	\vec{r}\ '(t) = \cos(t)\hat{i} + \hat{j} - \sin{t}\hat{k}\\%
+	|\vec{r}\ '(t) | = \sqrt{\cos^2(t) + 1 + \sin^2{t}}= \sqrt{2}\\%
+	L = \int_{0}^{2\pi}\sqrt{2}dt = \sqrt{2}(2\pi - 0) = 2\pi\sqrt{2}	
+\end{align}
 
 \subsection{Multiple Parametrizations}
 \(\vec{r_1} (t) = <t^2,t^3,t>\) where \( 1\leq t\leq 2 \) \\%
@@ -34,7 +40,7 @@ Find the length of the arc of the space curve from the point \(P(0,0,1)\) to \(Q
 
 \(\int_{1}^{2} |\vec{r_1}\ ' (t)| dt = \int_{0}^{\ln{2}} |r^{'}_2(t)|dt\) 
 
-\underline{Idea:} Arc Length is indepedent of the parametrization.
+\underline{Idea:} Arc Length is independent of the parametrization.
 
 \subsection{Arc Length Function}
 Suppose we have curve \(C: \vec{r} (t) \) where \(a\leq t\leq b\)  , then its \underline{arc length function} is:\\%
