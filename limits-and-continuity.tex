@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\addtolength\parskip{\bigskipamount}
+
+\graphicspath{ {./images/} } 
+
+\begin{document}
+\section{Limits}
+\underline{Definition:}\[
+	\lim_{(x,y) \to (a,b)} f(x,y) = L
+\]
+\textbf{if} we can make the values of \(f(x,y)\) as close to \(L\) as we like by taking the point \((x,y)\) sufficiently close to the point \((a,b)\), but not equal to \((a,b)\). 
+
+Appendix D reading
+
+\begin{itemize}
+	\item There can often be many ways to approach a limit.
+	\item Therefore, easier to show that a limit does not exist.
+\end{itemize}
+If \(f(x,y)\rightarrow L_1\) , as \((x,y)\rightarrow (a,b)\)  along curve \(C_1\) \\
+and \(f(x,y)\rightarrow L_2\) , as \((x,y)\rightarrow (a,b)\) along curve \(C_2\), \\
+where \(L_1 != L_2\) , then \[
+	\lim_{(x,y) \to (a,b)} f(x,y) = DNE
+\] 
+
+\subsubsection{Limits Example 1}
+Show that the limit does not exist.\\
+a) \[\lim_{(x,y) \to (0,0)} \frac{x^2-y^2}{x^2+y^2}\] 
+b) \[
+	\lim_{(x,y) \to (0,0)} \frac{xy}{x^2+y^2} 
+\]
+c) \[
+	\lim_{(x,y) \to (0,0)} \frac{xy^2}{x^2+y^4}
+\]
+
+\subsection{Limit Laws}
+Shared with previously known limit laws.
+\begin{itemize}
+	\item \(\lim(f\pm y) = \lim(f) \pm \lim(y) \)
+	\item \(\lim(fy) = (\lim(f))(\lim(y))\) 
+	\item \(\lim(\frac{f}{g}) = \frac{\lim(f)}{\lim(g)}\) , if \(\lim(g) \ne 0 \) 
+\end{itemize}
+
+\subsubsection{Squeeze Theorem}
+\underline{Example}: Evaluate \[
+	\lim_{(x,y) \to (0,0)} \frac{5xy^2}{x^2+y^2}
+\]
+\section{Continuity}
+\underline{Definition}: \(f\) is continuous at \((a,b)\) if \[
+	\lim_{(x,y) \to (a,b)} f(x,y) = f(a,b)
+\]
+\(f\) is continuous on \(D\) if \(f\) is continuous at every point \((a,b) \in D\) 
+\begin{itemize}
+	\item All polynomials are continuous on \(\mathbb{R}^2\) 
+	\item All rational functions are continuous on their domains.
+\end{itemize}
+\subsubsection{Continuity Example 1}
+Compute: \[
+	\lim_{(x,y) \to (2,1)} (xy^2+x^2y^3-5x+3y)
+\]
+\subsubsection{Continuity Example 2}
+Where is \(f(x,y) = \frac{x^2-y^2}{x^2+y^2}\) continuous?
+\subsubsection{Continuity Example 3}
+	Present in notes
+\end{document}
+
