@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\addtolength\parskip{\bigskipamount}
+
+\graphicspath{ {./images/} } 
+
+\begin{document}
+\section{Partial Derivatives}
+Take the derivative of a multivariable function with respect to one variable.
+\[
+	f_x(x,y) = \lim_{h \to 0} \frac{f(x+h,y) - f(x,y)}{h} = \frac{\partial f}{\partial x}  
+\]
+\[
+	f_y(x,y) = \lim_{h \to 0} \frac{f(x,y+h) - f(x,y)}{h} = \frac{\partial f}{\partial y} 
+\]
+
+\subsubsection{Partial Derivatives Example 1}
+Wave Heights\\
+\(h=f(v,t)\) \\
+Find in notes
+
+\subsubsection{Partial Derivatives Example 2}
+\(f(x,y) = x^3 + x^2y^3 - 2y^2\) \\
+Find \(f_x(2,1)\) and \(f_y(2,1)\) 
+
+\end{document}
+
