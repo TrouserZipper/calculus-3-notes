@@ -7,6 +7,7 @@
 
 \counterwithin*{equation}{section}
 \counterwithin*{equation}{subsection}
+\counterwithin*{equation}{subsubsection}
 
 \graphicspath{ {./images/} } 
 
@@ -48,7 +49,7 @@ We get $\vec{r} =\vec{r_0} +t(\vec{r_1} -  \vec{r_0} )  $ \\%
 $\vec{r} =  (1-t)\vec{r_0}  +t\vec{r_1}    $\\%
 $0\leq t\leq1$, since the parameter $t$ limits the points to between I and P
 
-\subsection{Equations of Lines Example 1}
+\subsubsection{Equations of Lines Example 1}
 Are the lines parallel, skew, or intersecting?\\%
 $L_1: x = 2 + t,\ y = -1 + 3t,\ z = 5-t$\\%
 $L_2: x = 1 + 2u,\ y = 4 + u,\ z = -2 + 4u$\\%
@@ -86,13 +87,13 @@ The normal vector is a vector which is orthogonal to any line on the plane, and 
 We can use two vectors, \(\vec{r}\) and  \( \vec{r_0} \) to point to the points \(P_0\) and \(P\) respectively. This is represented in the figure below.
 
 \begin{tikzpicture}[scale=3]
-	\clip (-0.1,-0.1) rectangle (1.5,1.5);
+	\clip (-0.6,-0.3) rectangle (0.6,1.5);
 	\draw[step=0.5cm,style=grid lines] (-1.4,-1.4) grid (1.4,1.4);	
 	\draw[<->] (-1.5,0) -- (1.5,0);
 	\draw[<->] (0,-1.5,0) -- (0,1.5,0);
 
-	\foreach \x in {-1,-0.5,0.5,1}
-		\draw (\x,1pt) -- (\x,-1pt);
+	\foreach \x/\xtext in {-1,-0.5/-\frac{1}{2},0.5/\frac{1}{2},1}
+	\draw (\x,1pt) -- (\x,-1pt) node[anchor=north] {$\xtext$};
 	\foreach \y in {-1,-0.5,0.5,1}
 		\draw (1pt,\y) -- (-1pt,\y);
 
@@ -104,8 +105,14 @@ We can use two vectors, \(\vec{r}\) and  \( \vec{r_0} \) to point to the points 
 	\draw (0,0) -- (30:1cm);
 \end{tikzpicture}.
 
-\subsection{Incomplete do later}
-Ex. 
+\subsection{Parallel or Intersecting}
+\begin{enumerate}
+	\item Two planes are parallel if their normal vectors are parallel.
+	\item Two planes that are not parallel intersect along a line
+	\item The angle between intersecting planes is the angle between their normal vectors 
+\end{enumerate}
+
+\subsubsection{Equations of Planes Example 1} 
 Find where line L intersects plane $5x-2y+4z=18$
 
 $L: x= -4t,\ y=5+t,\ z=2+3t$
@@ -115,15 +122,11 @@ $L: x= -4t,\ y=5+t,\ z=2+3t$
 -10t=20\\
 t=-2
 \end{align}.
-\begin{enumerate}
-	\item Two planes are parallel if their normal vectors are parallel.
-	\item Two planes that are not parallel intersect along a line
-	\item The angle between intersecting planes is the angle between their normal vectors 
-\end{enumerate}
 
-Ex.: Consider planes $x+y+z=1$ and $3x+y-2z=1$
+
+\subsubsection{Equations of Planes Example 2}
+Consider planes $x+y+z=1$ and $3x+y-2z=1$
 a) Find the angle between the planes
-\subsection{Continued}
 \begin{align}
 	\vec{n_1}=<1,1,1>,\vec{n_2}=<3,1,-2> \\%
 	\vec{n_1} \cdot {\vec{n_2}}=|\vec{n_1}||\vec{n_2}|\cos\theta 
@@ -137,7 +140,6 @@ $ax+by+cz+d=0$
 
 EX: Find the distance between the parallel planes
 
-\subsection
 Ex: Find the distance between the lines $L_1$ and $L_2$ 
 
 The distance between $L_1$ and $L_2$ is the same as the distance between the two parallel planes that contain these lines.\\
