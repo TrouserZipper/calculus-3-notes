@@ -12,29 +12,44 @@
 \graphicspath{ {./images/} } 
 
 \begin{document}
-\section{Vector Functions and Space Curves}
-\subsection{Introduction}
+\section{Vector Functions}
 $\vec{r} (t) = <f(t),g(t),h(t)>=f(t)\hat{i}+g(t)\hat{j}+h(t)\hat{k} $\\%
 Domain of $\vec{r} (t)=dom(\vec{r} ) = $\\%
 Draw figure demonstrating where all three domains of f,g,and h intersect.
 The domain of $\vec{r} (t) $ is the domain when all three functions are valid.
-\subsection{Vector Functions Example 1}
+\subsubsection{Vector Functions Example 1}
 Find the domain of: $\vec{r} (t) = \frac{t-2}{t+2}\hat{i}+\sin t\hat{j}+\ln(9-t^2)\hat{k} $
+\begin{align}
+	\frac{t-2}{t+2} \rightarrow t\neq -2 \\
+	\ln(9-t^2) \rightarrow t^2 < 9 \rightarrow |t|<3\\
+	\therefore \vec{r}(t) = \begin{Bmatrix}
+		DNE, & t = 2\\
+		DNE, & |t| > 3\\
+		\vec{r}(t)  \text{ otherwise}
+	\end{Bmatrix}
+\end{align}
+As a sidenote, this is by no means proper notation for signifying domain.
 
 \subsection{Limits}
 $\lim_{t \to a} \vec{r} (t)=<\lim_{t \to a} f(t),	\lim_{t \to a}g(t),\lim_{t \to a} h(t)>$  
 
-\subsection{Vector Functions Example 2}
-Find the limit: $\lim_{t \to \infty} (\arctan(t)\hat{i}+e^{-2t}\hat{j}+\frac{\ln(t)}{t}\hat{k})$
+\subsubsection{Vector Functions Example 2}
+Find the limit: $\vec{q} (t)= \lim_{t \to \infty} (\arctan(t)\hat{i}+e^{-2t}\hat{j}+\frac{\ln(t)}{t}\hat{k})$
+\begin{align}
+	\hat{i} \Rightarrow \lim_{t \to \infty} \arctan{(t)} = \frac{\pi}{2}\\
+	\hat{j} \Rightarrow \lim_{t \to \infty} e^{-2t} = 0\\
+	\hat{k} \Rightarrow \lim_{t \to \infty} \frac{\ln(t)}{t}\rightarrow \text{L'hopital's Rule} \rightarrow \lim_{t \to \infty} \frac{\frac{1}{t}}{1} = 0\\
+	\therefore \lim_{t \to \infty} \vec{q} (t) = \frac{\pi}{2}\hat{i} + 0\hat{j} + 0\hat{k} = \frac{\pi}{2}\hat{i}
+\end{align}
 
 \subsection{Continuity}
 A vector function $\vec{r}  $ is continuous at $a$ if $\lim_{t \to a} \vec{r} (t) = \vec{r} (a)  $
 
-\subsection{Space Curve}
+\section{Space Curve}
 $C = \{(x,y,z)\in \mathbb{R}^3:\ x=f(t),y=g(t),z=h(t),t\in I\}$.\\%
 $I$ is an interval.\\%
 Where $\vec{r} =<f(t),g(t),h(t)>$.
-\subsection{Space Curve Example 1}
+\subsubsection{Space Curve Example 1}
 Sketch the curve and indicate direction.\\%
 a) $\vec{r} (t) = <t^3,t^2> $\\%
 b) $\vec{r} (t)=<\sin{(\pi t)},t,\cos{(\pi t)}> $\\%
@@ -45,16 +60,17 @@ $z=\cos{(\pi t)}$\\%
 	\draw (0,0) -- (0,1);
 	\draw (-1,0) -- (0,0);
 \end{tikzpicture}
-\subsection{Geogebra tips}
+\subsubsection{Geogebra tips}
 Command: Curve$(f(t),g(t),h(t),t,a,b)$\\%
 $\vec{r} (t)=<f(t),g(t),h(t)>,a\leq t $
-\subsection{Space Curve Example 2}
+\subsubsection{Space Curve Example 2}
 Find a vector function for the line segment from:
 $P(2,4,-1) $ to $Q(3,0,4)$\\%
 \underline{recall:} $\vec{r}(t)=(1-t)\vec{r_0} +t \vec{r} _1   =\vec{r_0} +t(\vec{r_1-\vec{r_0}  }    )$
-\subsection{Space Curve Example 3}
+\subsubsection{Space Curve Example 3}
 Find a vector function for the intersection of the two surfaces $x^2+y^2=1$ and	$z=x^2$.
-\subsection{Exercise left for students: Vector Functions and Space Curves}
+
+\subsubsection{Vector Functions and Space Curves Exercises}
 Find the intersection of $x^2+y^2=z$ and $x=y+2z=6$.\\%
 Where does the helix $\vec{r} (t) = <sin(t),cos(t),t> $ intersect the sphere $x^2+y^2+z^2=5$
 
