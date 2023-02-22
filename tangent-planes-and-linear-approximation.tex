@@ -14,7 +14,36 @@
 
 \begin{document}
 \section{Tangent Planes}
-If two tangent lines can be acquired from a function of z 
+If two tangent lines can be acquired from a function of z, a tangent plane can be found. We have some methods by which we can form a tangent plane:
+
+\noindent The equation of a line is given by its slope \(\frac{dy}{dx}\) multiplied by \((x-x_0)\), which is equal to \((y-y_0)\):
+\[
+	y-y_0 = \frac{dy}{dx}(x-x_0)
+\]
+Where \(x_0\) and \(y_0\) are constants representing a translation in the \(x\) and \(y\) axes respectively.
+
+\noindent The equation of a plane is given by the standard form \(Ax + By + Cz = D\), where \(D\) is the sum of the products between \((A,B,C)\) and a given point \((x_0, y_0, z_0)\).\\
+We want the equation of the plane in terms of \((x,y)\) in order to find a tangent plane to the equation \(f(x,y)= z\). So, we can set up our equation:
+\begin{align}
+	f(x,y) = Ax + By + Cz = D = Ax_0 + By_0 + Cz_0
+\end{align}
+By subtracting \(D\) which is equal to \(Ax_0 + By_0 + Cz_0\), we are left with:
+\begin{align}
+	A(x-x_0) + B(y-y_0) + C(z-z_0) = 0
+\end{align}
+Next we isolate \(z-z_0\):
+\begin{align}
+	z-z_0=a(x-x_0) + b(y-y_0)  
+\end{align}
+Where \(a=-\frac{A}{C}\) and \(b = -\frac{B}{C}\), and that is our equation of a plane in terms of \((x,y)\)\\
+Now, this is beginning to resemble the equation of a line.\\
+When \(y=y_0\), we see \(z-z_0 = a(x-x_0)\) which is a line where \(a\) is the slope.\\
+Likewise, when \(x=x_0\), we see \(z-z_0 = b(y-y_0)\), a very similar behaviour.
+
+\noindent Now that we have our equation of a plane in terms of \(x\) and \(y\), we can find the tangent plane to a point \(P(x_0,y_0,z_0)\) of a function \(f(x,y)\) by using the partial derivatives of \(f(x,y)\) to solve for slopes:
+\[
+	z-z_0 = f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0)
+\]
 
 \subsubsection{Tangent Planes Example 1}
 Find the tangent plane to \(z= x^2 + 2y^2\) at point \(P(1,1,3)\) 
@@ -24,6 +53,12 @@ Find the tangent plane to \(z= x^2 + 2y^2\) at point \(P(1,1,3)\)
 \[
 	L(x,y) = f(x_0,y_0) + f_x(x_0,y_0)(x-x_0) + f_y(x_0,y_0)(y-y_0)
 \]
+\subsubsection{Non-continuous Partial Derivative}
+Consider the function:
+\[
+	f(x,y) = \frac{xy}{x^2+y^2}
+\]
+is discontinuous at \(f(0,0)\) because on the line \(y=x\), \(f(x,y) = \frac{1}{2}\) on all points.
 
 \subsection{Differentials}
 Recall if \(y=f(x)\) , then: \\
@@ -49,7 +84,7 @@ Suppose \(z=f(x,y)\) , we define \(dx\) and \(dy\) to be independent variables\
 	dz=f_x(a,b)(x-a) + f_y(a,b)(y-b)
 \]
 \[
-	f(x,y) \approx (L(x,y) = f(a,b) + dz
+	f(x,y) \approx L(x,y) = f(a,b) + dz
 \]
 when \((x,y)\) is near \((a,b)\) 
 
