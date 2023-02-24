@@ -60,6 +60,24 @@ Consider the function:
 \]
 is discontinuous at \(f(0,0)\) because on the line \(y=x\), \(f(x,y) = \frac{1}{2}\) on all points.
 
+Let us take a brief detour to explore the increment of a single variable function \(y=f(x)\):\\
+\(\triangle y = f(a+ \triangle x)-f(a)\)
+
+It is possible to be shown that if \(f\) is differentiable at \(a\), then: 
+\[
+	\triangle y = f'(a)\triangle x + \epsilon \triangle x
+\]
+where \(\epsilon \rightarrow 0\) as \(\triangle x \rightarrow 0\)\\
+Now, instead we can say \[
+	\triangle z = f(x+\triangle x, y + \triangle y) - f(x,y)
+\]
+where \(z=f(x,y)\)\\
+This is useful for the definition:
+If \(z=f(x,y)\), then \(f\) is differentiable at \((a,b)\) if \(\triangle z\) can be expressed in the form: 
+\[
+	\triangle z= f_x(a,b)\triangle x + f_y(a,b)\triangle y + \epsilon_1 \triangle x + \epsilon_2\triangle y
+\]
+where \(\epsilon_1 \rightarrow 0\) and \(\epsilon_2 \rightarrow 0\) as \((\triangle x, \triangle y) \rightarrow (0,0)\)
 
 \subsection{Differentials}
 Recall if \(y=f(x)\) , then: \\
