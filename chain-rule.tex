@@ -25,6 +25,7 @@ If: \(y=f(x)\) and \(x=g(t)\), then
 	\end{minipage}
 }
 
+\subsection{Functions of 1 variable}
 Consider \(z=f(x,y)\) and \(x=g(t)\) and \(y=h(t)\):\\
 \begin{tikzpicture}
 	\draw (1.2, 2cm) node[anchor=south west] {z} -- (0, 0) node[anchor=north] {x};
@@ -37,7 +38,100 @@ Which depicts \(z=f(x,y)\), \(x=g(t)\), \(y=h(t)\):
 \[
 	\frac{dz}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}
 \]
+Recall, in order for a function \(z\) to be differentiable at point \((a,b)\), \(\triangle z\) must be able to be put in the form:
+\[
+	\triangle z = \frac{\partial f}{\partial x} \triangle x + \frac{\partial f}{\partial y} \triangle y + \epsilon_1\triangle x + \epsilon_2\triangle y
+\]
+Where \(\epsilon_1 \rightarrow 0\) and \(\epsilon_2 \rightarrow 0\) as \((\triangle x, \triangle y) \rightarrow (0,0)\)
+If functions \(\epsilon_1\) and \(\epsilon_2\) are not defined at \((0,0)\), we can define them to be 0 there.
 
+Now, we divide both sides of the equation by \(\triangle t\):
+\[
+	\frac{\triangle z}{\triangle t} = \frac{\partial f}{\partial x} \frac{\triangle x}{\triangle t} + \frac{\partial f}{\partial y} \frac{\triangle y }{\triangle t} + \epsilon_1 \frac{\triangle x}{\triangle t} + \epsilon_2 \frac{\triangle y }{\triangle t}
+\]
 
+We show \(\triangle x = g(t+\triangle t) - g(t) \rightarrow 0\) as \(\triangle t \rightarrow 0\) because it is assumed \(g\) is differentiable and therefore continuous.
+
+In the same way, \(\triangle y \rightarrow 0\). With these two cases, we have established that \(\epsilon_1 \rightarrow 0\) and \(\epsilon_2 \rightarrow 0\). 
+This appears very hand wavy and it is, however I have decided the best way to progress at this point is to accept and memorize these facts and conditions.
+
+Proceeding from there, because \(\epsilon_1 \rightarrow 0\) and \(\epsilon_2 \rightarrow 0\), we can now say:
+\begin{align}
+	\frac{dz}{dt}=\lim_{\triangle t \to 0} \frac{\triangle z}{\triangle t}
+\end{align}
+\begin{align}
+	= \frac{\partial f}{\partial x} \lim_{\triangle t \to 0} \frac{\triangle x}{\triangle t} + \frac{\partial f}{\partial y} \lim_{\triangle t \to 0} \frac{\triangle y}{\triangle t} + (\lim_{\triangle t \to 0} \epsilon_1)\lim_{\triangle t \to 0} \frac{\triangle x}{\triangle t} + (\lim_{\triangle t \to 0} \epsilon_2) \lim_{\triangle t \to 0} \frac{\triangle y}{\triangle t}
+\end{align}
+\begin{align}
+	= \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}+ 0 \cdot \frac{dx}{dt}+0\cdot \frac{dy}{dt}\\
+	=\frac{\partial f}{\partial x} \frac{dx}{dt}+ \frac{\partial f}{\partial y} \frac{dy}{dt}
+\end{align}
+Let us rewrite this for using \(\frac{\partial z}{\partial x} \) instead of \(\frac{\partial f}{\partial x} \):
+
+\fbox{
+	\begin{minipage}{1.6in}
+		\[
+			\frac{dz}{dt} = \frac{\partial z}{\partial x} \frac{dx}{dt} + \frac{\partial z}{\partial y} \frac{dy}{dt}
+		\]
+	\end{minipage}
+}
+
+\subsection{Functions of Multiple Variables}
+Now let us look at the case where \(x\) and \(y\) are functions of two variables: \(x = g(s,t)\), \(y=h(s,t)\)
+
+We simply have two differentials rather than a single one:
+
+\noindent\fbox{%
+	\begin{minipage}{1.6in}
+		\[
+			\frac{\partial z}{\partial s} = \frac{\partial f}{\partial x} \frac{dx}{ds}+ \frac{\partial f}{\partial y} \frac{dy}{ds}
+		\]
+	\end{minipage}	
+}
+A function of \(t\) 
+
+\noindent\fbox{%
+	\begin{minipage}{1.6in}
+		\[
+			\frac{\partial z}{\partial t} = \frac{\partial f}{\partial x} \frac{dx}{dt}+ \frac{\partial f}{\partial y} \frac{dy}{dt}
+		\]
+	\end{minipage}	
+}
+A function of \(s\)
+
+\subsubsection{General Rule}
+In general, it can be shown that for \(u=f(x_1,x_2,...,x_n)\), \\%
+and \(x_i = g_i(t_1,t_2,...,t_m)\):
+\[
+	\frac{\partial u}{\partial t_i} = \sum_{j=1}^{n} \frac{\partial u}{\partial x_j} \cdot \frac{dx_j}{dt_i} = \frac{\partial u}{\partial x_1} \frac{dx}{dt_i} + \frac{\partial u}{\partial x_2}\frac{dx_2}{dt_i} + \hdots + \frac{\partial u}{\partial x_n} \frac{dx_n}{dt_i} 
+\].\\
+for \(i=1,2,...,m\)
+\subsection{Examples}
+\subsubsection{Chain Rule Example 1}
+If \(z=x^2y^3\), \(x=\cos(2t)\), and \(y=1+\sin t\), then find \(\frac{dz}{dt}\) when \(t=0\).
+
+\subsubsection{Chain Rule Example 2}
+Ideal Gas Law \(PV=8.31T\)\\
+P = Pressure (kPa)\\
+V = volume (L)\\
+T = temperature (K)\\
+The equation relates these 3 quantities for a mole of an ideal gas. How fast is the volume changing when the temperature is 300K and \underline{increasing} by 0.1K/s, and the pressure is 25kPa and \underline{decreasing} by 0.042 kPa/s?
+
+\subsubsection{Chain Rule Example 3}
+\(z=e^xcosy\),	\(x=st^3\), \(y=s^3t\)\\
+Find \(\frac{dz}{ds}\) and \(\frac{dz}{dt}\).
+
+\subsubsection{Chain Rule Example 4}
+\(w=f(x,y,z)\), \(x=x(u,v)\), \(y=y(u,v)\), \(z=z(u,v)\)\\
+Find \(\frac{dw}{du}\)
+
+\subsubsection{Chain Rule Example 5}
+Suppose \(u=y^4z + x^3z^2\) where \(x=ste^r\), \(y = st^2e^{-r}\), and \(z=s^2t\sin(r)\). \\
+Find \(\frac{du}{dt}\) when \(r=0\), \(s=2\), and \(t=1\).
+
+\subsubsection{Chain Rule Example 6}
+If \(g(s,t) = f(s^3 - t^3, t^3 - s^3)\), and \(f\) is differentiable, show that g satisfies the equation:
+\[
+	t^2 \frac{dg}{ds} + s^2 \frac{dg}{dt} = 0
+\]
 \end{document}
-
