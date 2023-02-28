@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\counterwithin*{equation}{subsubsection}
+\addtolength\parskip{\bigskipamount}
+
+\graphicspath{ {./images/} } 
+
+\begin{document}
+
+\section{Implicit Differentiation}
+
+Suppose we have an equation \(F(x,y) = 0\) which implicitly defines y as a function of \(x\). That is, \(y=f(x)\) where \(F(x,f(x)) = 0\) , for all \(x\)  in the domain of \(f\).  
+
+If \(F\) is differentiable, we may use the Chain Rule (Case 1) on both sides of the equation \(F(x,y) = 0\):
+\[
+	\frac{\partial F}{\partial x} \frac{dx}{dx} + \frac{\partial F}{\partial y} \frac{dy}{dx} =0
+\]
+\(\frac{dx}{dx} = 1\) 
+\[
+	\Rightarrow \frac{dy}{dx}= \frac{-\frac{\partial F}{\partial x} }{\frac{\partial F}{\partial Y} } = -\frac{F_x}{F_y}	
+\]
+
+Now, suppose \(z\) is implicitly defined as a function of \(z=f(x,y)\) by an equation \(F(x,y,z) = 0\). That is, \(F(x,y,f(x,y) = 0\) for all \((x,y)\) in the domain of \(f\). Then, if \(F\) and \(f\) are differentiable:
+\[
+	F(x,y,z) = 0
+\]
+
+\underline{Partial Derivative with respect to \(x\) }:
+\[
+	\frac{\partial F}{\partial x} \frac{dx}{dx} + \frac{\partial F}{\partial y} \frac{dy}{dx} + \frac{\partial F}{\partial z} \frac{dz}{dx} = 0
+\]
+
+\underline{Partial Derivative with respect to \(y\) }:
+\[
+	% Finish later!!
+\]
+\subsubsection{Implicit Differentiation Example 1}
+Find \(y'\) if \(x^3+y^3=xy\) 
+
+\subsubsection{Implicit Differentiation Example 2}
+Find \(\frac{\partial z}{\partial x} \) and \(\frac{\partial z}{\partial y} \) if \(x^4+y^4+z^4+2xyz = 1\) 
+
+\subsection{Implicit Differentiation Exercises}
+\begin{enumerate}
+	\item If \(z=x^2y+3xy^4\), where \(x=\sin(2t)\) and \(y=\cos(t)\), find \(\frac{dz}{dt}\) when \(t=0\)   
+	\item If \(u=x^4y+y^2z^3, \) where \(x=rse^t,\ y=rs^2e^{-t},\) and \(z=r^2\sin(t)\), find \(\frac{\partial u}{\partial s}\) when \(r=2\),\(s=1\), and \(t=0\)   
+	\item Find \(\frac{\partial z}{\partial x} \) and \(\frac{\partial z}{\partial y} \) if \(x^3+y^3+z^3+6xyz = 1\) 
+	\item Revisit the Ideal Gas Law: \(PV = 8.31T\). Find the rate at which the pressure is changing when the temperature is \(300K\) and increasing by \(0.1K/s\) and teh volume is \(100L\) and increasing by \(0.2L/s\).  
+\end{enumerate}
+\end{document}
+
