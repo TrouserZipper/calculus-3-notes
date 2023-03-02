@@ -50,10 +50,10 @@ Now, we divide both sides of the equation by \(\triangle t\):
 	\frac{\triangle z}{\triangle t} = \frac{\partial f}{\partial x} \frac{\triangle x}{\triangle t} + \frac{\partial f}{\partial y} \frac{\triangle y }{\triangle t} + \epsilon_1 \frac{\triangle x}{\triangle t} + \epsilon_2 \frac{\triangle y }{\triangle t}
 \]
 
-We show \(\triangle x = g(t+\triangle t) - g(t) \rightarrow 0\) as \(\triangle t \rightarrow 0\) because it is assumed \(g\) is differentiable and therefore continuous.
+We show \(\triangle x = g(t+\triangle t) - g(t) \rightarrow 0\) as \(\triangle t \rightarrow 0\), and it is assumed \(g\) is differentiable. 
+\\And in the same way, \(\triangle y = h(t+\triangle t) - h(t) \to 0\) as \(\triangle t \to 0\), again assuming \(h\) is differentiable near \(t\).
 
-In the same way, \(\triangle y \rightarrow 0\). With these two cases, we have established that \(\epsilon_1 \rightarrow 0\) and \(\epsilon_2 \rightarrow 0\). 
-This appears very hand wavy and it is, however I have decided the best way to progress at this point is to accept and memorize these facts and conditions.
+We know previously from Tangent Planes and Linearization that as \(\triangle x \to 0 \), \(\epsilon_1 \to 0\) and likewise for \(\triangle y\) and \(\epsilon_2\).
 
 Proceeding from there, because \(\epsilon_1 \rightarrow 0\) and \(\epsilon_2 \rightarrow 0\), we can now say:
 \begin{align}
@@ -103,7 +103,7 @@ A function of \(s\)
 In general, it can be shown that for \(u=f(x_1,x_2,...,x_n)\), \\%
 and \(x_i = g_i(t_1,t_2,...,t_m)\):
 \[
-	\frac{\partial u}{\partial t_i} = \sum_{j=1}^{n} \frac{\partial u}{\partial x_j} \cdot \frac{dx_j}{dt_i} = \frac{\partial u}{\partial x_1} \frac{dx}{dt_i} + \frac{\partial u}{\partial x_2}\frac{dx_2}{dt_i} + \hdots + \frac{\partial u}{\partial x_n} \frac{dx_n}{dt_i} 
+	\frac{du}{dt_i} = \sum_{j=1}^{n} \frac{\partial u}{\partial x_j} \cdot \frac{dx_j}{dt_i} = \frac{\partial u}{\partial x_1} \frac{dx}{dt_i} + \frac{\partial u}{\partial x_2}\frac{dx_2}{dt_i} + \hdots + \frac{\partial u}{\partial x_n} \frac{dx_n}{dt_i} 
 \].\\
 for \(i=1,2,...,m\)
 \subsection{Examples}
@@ -116,6 +116,30 @@ P = Pressure (kPa)\\
 V = volume (L)\\
 T = temperature (K)\\
 The equation relates these 3 quantities for a mole of an ideal gas. How fast is the volume changing when the temperature is 300K and \underline{increasing} by 0.1K/s, and the pressure is 25kPa and \underline{decreasing} by 0.042 kPa/s?
+
+Givens:\\
+\(P = 25kPa\)\\
+\(\triangle P = \frac{dP}{dt} = -0.042 kPa/s\)\\
+\(T = 300K\)\\
+\(\triangle T = \frac{dT}{dt} = 0.1K/s\)\\
+\(V = \frac{8.31T}{P}\)
+
+Find \(\frac{dV}{dP}\) and \(\frac{dV}{dT} \).
+\begin{align}
+	\frac{dV}{dP} = -\frac{8.31T}{P^2}\\
+	\frac{dV}{dT} = \frac{8.31}{P}
+\end{align}
+
+Now, solve for \(\frac{dV}{dt}\)
+\begin{align}
+	\frac{dV}{dt} = \frac{\partial V}{\partial P} \frac{dP}{dt} + \frac{\partial V}{\partial T} \frac{dT}{dt}\\
+	\frac{dV}{dt} = -\frac{8.31T}{P^2}(-0.042) + \frac{8.31}{P}(0.1)\\
+	=\frac{(0.042)(8.31)(300)}{625} + \frac{8.31(0.1)}{25}\\
+	\approx .2008
+\end{align}
+\[
+	\therefore \frac{dV}{dt} \approx .2008 L/s
+\].
 
 \subsubsection{Chain Rule Example 3}
 \(z=e^xcosy\),	\(x=st^3\), \(y=s^3t\)\\

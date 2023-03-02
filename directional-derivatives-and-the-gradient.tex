@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\counterwithin*{equation}{subsubsection}
+\addtolength\parskip{\bigskipamount}
+
+\graphicspath{ {./images/} } 
+
+\begin{document}
+
+\section{Directional Derivatives}
+In general, if we wish to find the derivative of a function \(z=f(x,y)\) in the direction of \(\vec{u} = <a,b,c>\)
+
+\underline{Theorem \#3}\\
+If \(f\) is a differentiable function of \(x\) and \(y\), then \(f\) has a directional derivative in the direction of any unit vector \(\vec{u}  = <a,b>\) and:
+\[
+	D_{\hat{u}}f(x,y) = f_x(x,y)a + f_y(x,y)b
+\]
+\underline{Proof:} \\
+Define g(h) = \(f(x_0+ha,y_0+hb)\). Then:
+\[
+	g'(0) = \lim_{h \to 0} \frac{g(h) - g(0)}{h} = \lim_{h \to 0} \frac{f(x_0 + ha,y_0+hb) - f(x_0,y_0)}{h}
+\]
+\[
+=	D_{\hat{u}}f(x_0,y_0) 
+\]
+Also we may write \(g(h) = f(x,y)\) where \(x=x+ha\) and \(y=y_0 +hb\). 
+Using the Chain Rule yields:
+\[
+	g'(h) = \frac{\partial f}{\partial x} \frac{dx}{dh}+ \frac{\partial f}{\partial y} \frac{dy}{dh} = f_x(x,y)a + f_y(x,y)b
+\]
+Because \(x=x_0\) and \(y=y_0\) when \(h=0\),
+\[
+	\Rightarrow g'(0) = f_x(x_0,y_0)a + f_y(x_0,y_0)b
+\]
+\[
+	\therefore D_{\hat{u} }f(x_0,y_0) = f_x(x_0,y_0)a + f_y(x_0,y_0)b
+\]
+
+\subsubsection{Directional Derivatives Example 1}
+\(f(x,y) = x^3 - 3xy + 4y^2\) and \(\hat{u}\) is given by \(\theta = \frac{\pi}{3}\)\\
+Find \(D_{\hat{u}}f(2,1)\)
+
+\section{Gradient}
+The directional derivative of a function \(z=f(x,y)\) is \(D_{\hat{u}}f(x,y) = \triangledown f(x,y) \cdot \vec{u} \)
+\[
+	\triangledown f(x,y) = <f_x(x,y),f_y(x,y)>
+\]
+\(\triangledown f(x,y)\) is known as the gradient 
+\end{document}
+
