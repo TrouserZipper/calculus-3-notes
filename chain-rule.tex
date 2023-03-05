@@ -106,6 +106,74 @@ and \(x_i = g_i(t_1,t_2,...,t_m)\):
 	\frac{du}{dt_i} = \sum_{j=1}^{n} \frac{\partial u}{\partial x_j} \cdot \frac{dx_j}{dt_i} = \frac{\partial u}{\partial x_1} \frac{dx}{dt_i} + \frac{\partial u}{\partial x_2}\frac{dx_2}{dt_i} + \hdots + \frac{\partial u}{\partial x_n} \frac{dx_n}{dt_i} 
 \].\\
 for \(i=1,2,...,m\)
+
+\subsubsection{Take the 2nd derivative of a function: \(z=f(x,y)\)}
+\(z=f(x,y), x = 2rs, y = r^2 + s^2\)\\
+Find \(\frac{\partial ^2 z}{\partial r^2} \)
+\begin{align}
+	\frac{\partial z}{\partial r} =\frac{\partial z}{\partial x} \frac{\partial x}{\partial r}  + \frac{\partial z}{\partial y} \frac{\partial y}{\partial r} \\
+	= 2s \frac{\partial z}{\partial x}  + 2r \frac{\partial z}{\partial y} \\
+	\frac{\partial ^2z}{\partial r^2} = \frac{\partial }{\partial r} (\frac{\partial z}{\partial r} )\\
+	\nonumber \text{Chain rule + Product rule:}\\
+	\frac{\partial }{\partial r} \frac{\partial z}{\partial r} = 2s[\frac{\partial ^2z}{\partial x^2} \frac{\partial x}{\partial r} + \frac{\partial ^2z}{\partial x \partial y}\frac{\partial y}{\partial r}  ] + 2 \frac{\partial z}{\partial y} + 2r[\frac{\partial ^2z}{\partial y^2} \frac{\partial y}{\partial r} + \frac{\partial ^2z}{\partial y \partial x} \frac{\partial x}{\partial r} ]\\
+	= 2 \frac{\partial z}{\partial y} + 4s^2 \frac{\partial ^2z}{\partial x^2} + 8rs \frac{\partial ^2z}{\partial x \partial y} + 4r^2 \frac{\partial ^2z}{\partial y^2} 
+\end{align}
+
+\subsection{Implicit Differentiation}
+\begin{itemize}
+	\item Suppose we have an equation \(F(x,y) = 0\) which implicitly defines \(y\) as a function of \(x\). That is, \(y=f(x)\) where \(F(x,f(x)) = 0\), for all \(x\) in the domain of \(f\).
+	\item If \(F\) is differentiable, we may use the Chain Rule on both sides of the equation \(F(x,y) = 0\)
+		\[
+			\frac{\partial F}{\partial x} \frac{dx}{dx} + \frac{\partial F}{\partial y} \frac{\partial y}{\partial x} = 0
+		\]
+\end{itemize}
+
+\(\Rightarrow\) 
+\indent \fbox{
+	\begin{minipage}{1.5in}
+		\[
+			\frac{dy}{dx} = \frac{-\frac{\partial F}{\partial x} }{\frac{\partial F}{\partial y} } = -\frac{F_x}{F_y}
+		\]
+	\end{minipage}
+}
+
+Suppose now \(z\) is implicitly defined as a function \(z=f(x,y)\) by an equation \(F(x,y,z) = 0\). That is, \(F(x, y, f(x,y)) = 0\) for all \((x,y)\) in the domain of \(f\). Then if \(F\) and \(f\) are differentiable, we have two equations:
+\[
+	F(x,y,z) = 0
+\]
+\[
+	\frac{\partial F}{\partial x} \frac{\partial x}{\partial x} + \frac{\partial F}{\partial y} \frac{\partial y}{\partial x} + \frac{\partial F}{\partial z} \frac{\partial z}{\partial x} = 0
+\]
+Assuming \(\frac{\partial F}{\partial z} \neq 0\), we solve for either \(\frac{\partial z}{\partial x}\)  or \(\frac{\partial z}{\partial y}\) depending on what we would like to find.
+
+\fbox{
+	\begin{minipage}{2in}
+		\[
+			\frac{\partial z}{\partial x} -\frac{\frac{\partial F}{\partial x} }{\frac{\partial F}{\partial z} } \qquad  \frac{\partial z}{\partial y} = -\frac{\frac{\partial F}{\partial y} }{\frac{\partial F}{\partial z} }
+		\]
+	\end{minipage}
+}
+\subsubsection{Implicit Differentiation Example 1}
+Find \(y'\) if \(x^3 + y^3 = xy\)
+\[
+	F(x,y) = x^3 + y^3 - xy  = 0
+\]
+\[
+	\therefore \frac{dy}{dx} = =\frac{F_x}{F_y} = -\frac{3x^2 - y}{3y^2 - x}
+\]
+
+\subsubsection{Implicit Differentiation Example 2}
+Find \(\frac{\partial z}{\partial x} \) and \(\frac{\partial z}{\partial y} \) if \(x^4 + y^4 + z^4 + 2xyz = 1\)\\
+\(F(x,y,z) = x^4 + y^4 + z^4 + 2xyz -1 = 0\)
+\[
+	\frac{\partial z}{\partial x}  = -\frac{F_x}{F_z}
+\]
+\[
+ 	= -\frac{4x^3 + 2yz}{4z^3 + 2xy} = -\frac{2x^3 + yz}{2z^3 + xy}
+\]
+\[
+	\frac{\partial z}{\partial y}  = -\frac{F_y}{F_z} = -\frac{4y^3 + 2xz}{4z^3 + 2xy} = -\frac{2y^3 + xz}{2z^3 + xy}
+\]
 \subsection{Examples}
 \subsubsection{Chain Rule Example 1}
 If \(z=x^2y^3\), \(x=\cos(2t)\), and \(y=1+\sin t\), then find \(\frac{dz}{dt}\) when \(t=0\).
@@ -158,4 +226,12 @@ If \(g(s,t) = f(s^3 - t^3, t^3 - s^3)\), and \(f\) is differentiable, show that 
 \[
 	t^2 \frac{dg}{ds} + s^2 \frac{dg}{dt} = 0
 \]
+
+\subsection{Exercises}
+\begin{enumerate}
+	\item If \(z=x^y + 3xy^4\), where \(x= \sin(2t)\) and \(y=\cos(t)\), find \(\frac{dz}{dt}\) when \(t=0\).
+	\item If \(u = x^4y + y^2z^3\), where \(x=rse^t\), \(y=rs^2e^{-t}\), and \(z=r^s\sin(t)\), find \(\frac{\partial u}{\partial s} \) when \(r = 2\), \(s = 1\), and \(t= 0\).
+	\item Find \(\frac{\partial z}{\partial x}\) and \(\frac{\partial z}{\partial y}\) if \(x^3 + y^3 + z^3 + 6xyz = 1\)
+	\item Revisit the Ideal Gas Law: \(PV = 8.31T\). Find the rate at which the pressure is changing when the temperature is \(300K\) and increasing by \(0.1K/s\) and the volume is \(100L\) and increasing by \(0.2L/s\).
+\end{enumerate}
 \end{document}
