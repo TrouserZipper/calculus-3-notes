@@ -15,7 +15,40 @@
 \begin{document}
 
 \section{Directional Derivatives}
-In general, if we wish to find the derivative of a function \(z=f(x,y)\) in the direction of \(\vec{u} = <a,b,c>\)
+In general, if we wish to find the derivative of a function \(z=f(x,y)\) in the direction of \(\hat{u} = <a,b,c>\), we are looking for the tangent line \(T\) to the curve \(C\) at \(P\) in the direction \(\hat{u}\).
+
+Let us assume \(\hat{u}\) is parallel to the \(xy\) plane. The slope of a tangent line \(T\) in the direction of \(\hat{u}\) is the rate of change of \(z\) in the direction \(\hat{u}\):
+\[
+	z=f(x,y) \to z_0 = f(x_0, y_0)
+\]
+
+Since \(x_0\) and \(y_0\) are given, let us solve for \((x,y)\). To this, we should find 2 points: an endpoint \(K(x,y,0)\) and an origin which lies at \(z=0\) for the point \(P\), henceforth known as \(H(x_0,y_0,0)\). 
+
+We now know the line \(\vec{KH} \) must be parallel to the vector \(\hat{u}\).
+\[
+	\Rightarrow \vec{KH} = h\hat{u} \text{, for some scaler \(h\)}
+\]
+
+Reiterate:
+\[
+	\Rightarrow <x-x_0,y-y_0> = <ha,hb>
+\]
+
+Now, we separate components to solve for \(x\) and \(y\) individually to get two equations:
+\begin{align}
+	\nonumber x-x_0 = ha\\
+	x = x_0 + ha
+\end{align}
+\begin{align}
+	\nonumber y - y_0 = hb\\
+	y = y_0 + hb
+\end{align}
+
+Using the definition of the derivative, we can finally find the rate of change of \(z\) in the direction of \(\hat{u}\):
+\begin{align}
+	\lim_{h \to 0} \frac{(f(x,y) - f(x_0,y_0)}{h} = \triangle z \text{ in the direction of \(\hat{u}\)}\\
+	= \lim_{h \to 0} \frac{f(x_0 + ha, y_0 + hb) - f(x_0,y_0)}{h}
+\end{align}
 
 \underline{Theorem \#3}\\
 If \(f\) is a differentiable function of \(x\) and \(y\), then \(f\) has a directional derivative in the direction of any unit vector \(\vec{u}  = <a,b>\) and:
