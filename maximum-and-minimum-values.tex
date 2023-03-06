@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\counterwithin*{equation}{subsubsection}
+\addtolength\parskip{\bigskipamount}
+
+\graphicspath{ {./images/} } 
+
+\begin{document}
+\section{Maximum and Minimum Values}
+\underline{Definition:} \(f(x,y)\)  has a local max. (min.) at \((a,b)\)  \\if \(f(x,y) \leq f(a,b) (f(x,y) \geq f(a,b))\) when \((x,y)\) is near \((a,b)\).
+
+\fbox{\(f(a,b)\) = local max.(min.) value}
+
+\subsubsection{Fermet's Theorem \#2}
+If \(f\) has a local maximum or minimum at \((a,b)\) and \(f_x(a,b)\) and \(f_y(a,b)\) exist, then \(f_x(a,b)=0\) and \(f_y(a,b) = 0\) 
+
+\underline{Idea:} \(\triangledown f(a,b) = \vec{0}  \rightarrow \) horizontal tangent plane
+
+\underline{Proof:} Let \(g(x) = f(x,b)\). If \(f\) has a local max.(min.) at \((a,b)\), then \(g\) has a local max.(min.) at \(a\). Thus, \(g'(a) = 0\)  by Fermet's Theorem for functions of one variable. Then:
+\[
+	g'(a) = f_x(a,b) = 0
+\]
+
+We can say the same for \(f_y(a,b) = 0\), where \(h(y) = f(a,y)\). If \(f\) has a local max.(min.) at \((a,b)\), then \(h\) has a local max.(min.) at \(b\). Thus, \(h'(b) = 0\) by Fermet's Theorem for functions of one variable. Then:
+\[
+	h'(b) = f_y(a,b) = 0
+\]
+
+\subsection{Definition of Critical Points}
+A point \((a,b)\) is called a \underline{critical point} (stationary point) of \(f\)  if \(f_x(a,b) = 0\) and \(f_y(a,b) = 0\), or if one of those partial derivatives does not exist. 
+
+By extension, if you have a local max/min at \((a,b)\), you hvae a critical point at \((a,b)\). 
+However, not all critical points yield a local extreme value.
+
+\subsection{Second Derivatives Test} 
+Suppose the second partial derivatives of \(f\) are continuous on a disk with centre \((a,b)\) and \(f_x(a,b) = 0\) and \(f_y(a,b) = 0\). Now let:
+
+\fbox{
+	\begin{minipage}{3.5in}
+		\[
+		D = D(a,b) = f_{xx}(a,b)f_{yy}(a,b) - [f_{xy}(a,b)]^2
+		\]
+	\end{minipage}
+}
+
+\begin{enumerate}
+	\item \(D>0\) and \(f_{xx}(a,b) > 0\) \\
+		\(\Rightarrow f(a,b)\) is a local minimum
+	\item \(D>0\) and \(f_{xx}(a,b) < 0\)\\
+		\(\Rightarrow f(a,b)\) is a local maximum
+	\item \(D<0\) \\
+		\(\Rightarrow f(a,b)\) is neither a local max. nor a local min. (Saddle Point)
+\end{enumerate}
+
+\underline{Proof:} Who knows :).
+
+\underline{Note}
+\begin{itemize}
+	\item \(D=0 \Rightarrow \) no information
+	\item We may use a determinant \\
+		\(D = \)
+\end{itemize}
+\subsubsection{Second Derivatives Test Example 1}
+\(f(x,y) = x^4 + y^4 -2xy + 1\) \\
+Find and classify the local extreme values of \(f\): 
+
+\subsubsection{Second Derivatives Test Example 2}
+Find the shortest distance from \(P(0,-2,1)\) to the plane \(2x + y + z = 4\).
+\end{document}
+
+
