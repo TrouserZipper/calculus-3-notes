@@ -76,9 +76,6 @@ Because \(x=x_0\) and \(y=y_0\) when \(h=0\),
 	\therefore D_{\hat{u} }f(x_0,y_0) = f_x(x_0,y_0)a + f_y(x_0,y_0)b
 \]
 
-\subsubsection{Directional Derivatives Example 1}
-\(f(x,y) = x^3 - 3xy + 4y^2\) and \(\hat{u}\) is given by \(\theta = \frac{\pi}{3}\)\\
-Find \(D_{\hat{u}}f(2,1)\)
 
 \section{Gradient}
 The directional derivative of a function \(z=f(x,y)\) is \(D_{\hat{u}}f(x,y) = \triangledown f(x,y) \cdot \vec{u} \)
@@ -86,5 +83,27 @@ The directional derivative of a function \(z=f(x,y)\) is \(D_{\hat{u}}f(x,y) = \
 	\triangledown f(x,y) = <f_x(x,y),f_y(x,y)>
 \]
 \(\triangledown f(x,y)\) is known as the gradient 
+
+\subsubsection{Gradiant Example 1}
+\(f(x,y) = cosx + e^{-xy}\)\\ 
+Find \(\triangledown f(x,y)\).
+
+\subsection{Functions of Three Variables}
+Definition:
+\[
+	D_{\hat{u}}f(x_0,y_0,z_0) = \lim_{h \to 0} \frac{f(x_0+ha,y_0+hb,z_0+hc) - f(x_0,y_0,z_0)}{h}
+\]
+where \(\hat{u} = <a,b,c>\)
+
+\subsection{Directional Derivatives Examples}
+\rule{\textwidth}{0.1mm}
+
+\subsubsection{Directional Derivatives Example 1}
+\(f(x,y) = x^3 - 3xy + 4y^2\) and \(\hat{u}\) is given by \(\theta = \frac{\pi}{3}\)\\
+Find \(D_{\hat{u}}f(2,1)\)
+
+\subsubsection{Directional Derivatives Example 2}
+\(f(x,y) = x^3y^2 - 4x\), \(P(-1,2)\)\\
+Find \(D_{\hat{u}}f\) at\((P)\) in the direction of \(\vec{v} = 5\hat{i} + 2\hat{j}\)
 \end{document}
 
