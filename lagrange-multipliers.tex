@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\counterwithin*{equation}{subsubsection}
+\addtolength\parskip{\bigskipamount}
+
+\graphicspath{ {./images/} } 
+
+\begin{document}
+\section{Lagrange Multipliers}
+\underline{Idea:} max/min \(f(\vec{x} ) \) \\
+Subject to \(g(\vec{x} ) = k \) 
+
+\underline{Think:} max/min \(f(x,y)\) \\
+Subject to \(g(x,y) = k\) 
+
+There exists an optimal point where they have the same tangent line at the same point.
+
+The gradients of \(f(x,y)\) and \(g(x,y)\), \(\triangledown f\) and \(\triangledown g\),  at this optimal point are scalar multiples of each other:
+\[
+	\triangledown f = \lambda \triangledown g
+\]
+Where \(\lambda\) is known as the Lagrange Multiplier.
+
+\subsection{Method}
+To find the extreme values of \(f(x,y,z)\) subject to \(g(x,y,z) = k\) assuming they exist and \(\triangledown g \neq \vec{0}  \) on \(g(x,y,z) = k\):
+\begin{enumerate}
+	\item Find all values of \(x,y,z\), and \(\lambda\) such that:
+		\[
+			\triangledown f(x,y,z) = \lambda \triangledown g(x,y,z)
+		\]
+		and \(g(x,y,z) = k\) 
+	\item Evaluate \(f\) at all points found in part a). Identify the extreme values.
+\end{enumerate}
+
+\subsubsection{Key steps for Bounded Region Critical Points with Lagrange}
+\begin{enumerate}
+	\item Check boundary of \(R\)(region) 
+	\item Find and check critical points in \(R\) 
+\end{enumerate}
+
+In some problems, you may be met with max \(L = f(\vec{x} ) - \lambda(g(\vec{x} ) - k)  \) \\
+Solving \(\triangledown L = \vec{0}  \) leads to solving:
+\[
+	\triangledown f = \lambda \triangledown g
+\]
+\[
+	g(\vec{x} ) = k 
+\]
+\subsubsection{Lagrange Multipliers Example 1}
+A rectangular box without a lid is to be made from \(48m^2\) of cardboard. Find the maximum volume of such a box.
+
+\subsubsection{Lagrange Multipliers Example 2}
+\(f(x,y) = x^2 + 2y^2\); \(g(x,y) = x^2 + y^2\) \\ 
+Find the extreme values of \(f\) subject to \(g(x,y) \leq 1\) 
+\end{document}
