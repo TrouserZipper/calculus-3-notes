@@ -53,10 +53,39 @@ Solving \(\triangledown L = \vec{0}  \) leads to solving:
 \[
 	g(\vec{x} ) = k 
 \]
+
+What if the problem is maximizing \(f(\vec{x} ) \) subject to \(g(\vec{x} ) = k \), \(h(\vec{x} ) = c \)?\\
+Maximizing \(f(\vec{x} ) \) subject to two functions.
+
+We solve \(\triangledown f = \lambda \triangledown g + \mu \triangledown h\)\\
+\(g(\vec{x} ) = k \)\\
+\(h(\vec{x} ) = c \)
+
+\subsection{Examples}
+\rule{\textwidth}{0.1mm}
 \subsubsection{Lagrange Multipliers Example 1}
 A rectangular box without a lid is to be made from \(48m^2\) of cardboard. Find the maximum volume of such a box.
 
 \subsubsection{Lagrange Multipliers Example 2}
 \(f(x,y) = x^2 + 2y^2\); \(g(x,y) = x^2 + y^2\) \\ 
 Find the extreme values of \(f\) subject to \(g(x,y) \leq 1\) 
+
+\subsubsection{Lagrange Multipliers Example 3}
+Sphere \(S\): \(x^2 + y^2 + z^2 = 4\); \(P(3,1,-1)\) \\
+Find the points \(S\) closest to and farthest from \(P\). 
+
+\subsubsection{Lagrange Multipliers Example 4}
+Max \(f(x,y,z) = x + 2y + 3z\)\\
+Subject to: \(x-y+z = 1	\), \(x^2 + y^2 = 1\)
+
+\subsection{Exercises}
+\rule{\textwidth}{0.1mm}
+\begin{enumerate}
+	\item Find the extreme values of \(f\) subject to the given constraint
+		\begin{enumerate}
+			\item \(f(x,y) = x^2 + y^2\); \(xy = 1\)
+			\item \(f(x,y,z) = 2x + 6y + 10z\); \(x^2 + y^2 + z^2 = 35\) 
+		\end{enumerate}
+	\item Find the shortest distance from \(P(2,1,-1)\) to the plane \(x + y -z = 1\)
+\end{enumerate}
 \end{document}
