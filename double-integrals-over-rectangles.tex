@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\counterwithin*{equation}{subsubsection}
+\addtolength\parskip{\bigskipamount}
+
+\graphicspath{ {./images/} } 
+
+\begin{document}
+\section{Double Integrals Over Rectangles}
+\underline{Recall:} 
+\[\int_{a}^{b} f(x)dx = \lim_{n \to \infty} \sum_{i=1}^{n} f(x_i^k)\triangle xd\] 
+where 
+\[\triangle x = \frac{b-a}{n}\]
+
+\(\int_{a}^{b} f(x)dx = \) signed area between \(f\) and the \(x\)-axis from \(a\) to \(b\).
+
+\subsection{Volumes and Double Integrals}
+\subsubsection{Rectangle R}
+For some rectangle \(R\) and intervals \([a,b]\) and \([c,d]\) :
+\begin{align*}
+	\label{eq:Volume on interval}
+	R = [a,b] \times  [c,d]\\
+	 = \{(x,y)|a \leq x \leq b \text{ and } c \leq y \leq d\}
+\end{align*}
+
+We have some solid \(S\):
+\[
+	S = \{(x,y,z)|(x,y) \leq R \text{ and } 0 \leq z \leq f(x,y)\}
+\]
+Let us imagine intervals inbetween \([a,b]\) are labeled \(x_0,x_1, \hdots x_{m-1}, x_m\) and inbetween \([c,d]\) are labeled \(y_0, y_1, y_2 \hdots y_{n-1}, y_n\)
+
+now \(R_{ij} = [x_j \) %incomplete
+
+\underline{Idea}\\
+Volume \[ = V \approx \sum_{i=m}^{m} \sum_{j=1}^{n} f(x_{ij} ^ *, y_{ij}^*) \triangle A\]
+
+\[
+	V = \lim_{m,n \to \infty} \sum_{i=1}^{n} \sum_{j=1}^{n} f(x_{ij}^*, y_{ij}^*) \triangle A
+\]
+
+Which is the definition of the double integral: 
+\[\int_{}^{} \int_{}^{} f(x,y)dA\]
+
+\subsubsection{Volumes and Double integrals Example 1}
+
+\subsubsection{Volumes and Double Integrals Example 2}
+Find: \[
+	\int_{}^{} \int_{}^{} \sqrt{1-x^2} dA \text{ where } R = [-1,1] \times [-2,2]
+\]
+
+\subsection{Midpoint Rule}
+\[
+	\int_{}^{} \int_{}^{} f(x,y)dA \approx \sum_{n=1}^{m} \sum_{n=1}^{n} f(\overline{x_i}, \overline{y_j})\triangle A
+\]
+where \(\overline{x_i} = \frac{1}{2}(x_{i-1} + x_i)	\) and \(\overline{y_j} = \frac{1}{2}(y_{j-1} + y_i	\)
+
+\subsubsection{Midpoint Rule Example 1	}
+Midpoint Rule with \(m-n-2\)
+\[
+	\int_{}^{} \int_{}^{} (x - 3y^2)dA \text{ where } R = [0,2] \times [1,2]
+\]
+
+\subsection{Average Value}
+If you want to find some average value \(f_{ave}\):
+\[
+	f_{\text{ave}} = \frac{1}{A(R)} \iint_{R}f(x,y)dA
+\]
+where \(A(R) = \) area of \(R\).
+\end{document}
