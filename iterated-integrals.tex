@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\counterwithin*{equation}{subsubsection}
+\addtolength\parskip{\bigskipamount}
+
+\graphicspath{ {./images/} } 
+
+\begin{document}
+\section{Iterated Integrals}
+\begin{itemize}
+	\item Suppose we have a function \(f(x,y)\) that is integrable on the rectangle \(R= [a,b]\times [c,d]	\) 
+	\item We may compute a partial integration with respect to \(x\) from \(x=a\) to \(x = b\).
+	\item That is, we keep \(y \) fixed and \(f(x,y)\) is integrated with respect to \(x\), which leaves us with a function of \(y\):
+		\[
+			A(y) = \int_{a}^{b} f(x,y)dx
+		\]
+	\item Then integrating \(A\) with respect to \(y\) from \(y= c\) to \( y = d\) yields:
+		\begin{align*}
+			\int_{c}^{d} A(y)dy = \int_{c}^{d} [\int_{a}^{b} f(x,y)dx]dy\\
+			= \int_{c}^{d} \int_{a}^{b} f(x,y)dxdy
+		\end{align*}
+	\item Similarly, we may choose to integrate with respect to \(y\) first
+		\begin{align*}
+			\label{eq:Respect to Y}
+			\int_{a}^{b} \int_{c}^{d} f(x,y)dydx
+		\end{align*}
+\end{itemize}
+
+\subsection{Fubini's Theorem}
+If \(f\) is continuous on the rectangle \(R:[a,b] \times  [c,d]	\), then:
+\[
+	\iint_{R}f(x,y)dA = \int_{a}^{b} \int_{c}^{d} f(x,y)dydx = \int_{c}^{d} \int_{a}^{b} f(x,y)dxdy 
+\] 
+
+\subsubsection{Integrated Integrals Example 1} 
+Evaluate: 
+\begin{enumerate}
+	\item \(\int_{1}^{2} \int_{0}^{3} xy^2dydx\)
+	\item \(\int_{0}^{3} \int_{1}^{2} xy^2dxdy\)
+\end{enumerate}
+
+\subsubsection{Integrated Integrals Example 2}
+Evaluate:
+\begin{enumerate}
+	\item \(\iint_{R}(y-3x^2)dA\), where \(R = [1,2] \times [0,2]\)
+	\item \(\iint_{R}x\sin(xy)dA\) where \(R = [0,\pi] \times [1,2]\)
+\end{enumerate}
+\end{document}
