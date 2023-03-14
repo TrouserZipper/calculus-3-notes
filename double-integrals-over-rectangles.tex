@@ -39,7 +39,7 @@ Let us imagine intervals inbetween \([a,b]\) are labeled \(x_0,x_1, \hdots x_{m-
 now \(R_{ij} = [x_j \) %incomplete
 
 \underline{Idea}\\
-Volume \[ = V \approx \sum_{i=m}^{m} \sum_{j=1}^{n} f(x_{ij} ^ *, y_{ij}^*) \triangle A\]
+Volume \[ = V \approx \sum_{i=1}^{m} \sum_{j=1}^{n} f(x_{ij} ^ *, y_{ij}^*) \triangle A\]
 
 \[
 	V = \lim_{m,n \to \infty} \sum_{i=1}^{n} \sum_{j=1}^{n} f(x_{ij}^*, y_{ij}^*) \triangle A
@@ -73,4 +73,31 @@ If you want to find some average value \(f_{ave}\):
 	f_{\text{ave}} = \frac{1}{A(R)} \iint_{R}f(x,y)dA
 \]
 where \(A(R) = \) area of \(R\).
+
+\subsection{Properties of Double Integrals:}
+\begin{enumerate}
+	\item \[
+			\iint_{R}[f(x,y) + g(x,y)]dA = \iint_{R}f(x,y)da + \iint_{R}g(x,y)dA
+	\]
+	\item \[
+		\iint_{R}cf(x,y)dA = c \iint_{R}f(x,y)dA
+	\]
+	\item If \(f(x,y) \geq g(x,y)\) on \(R\) (i.e \((x,y)\) is in the set of \(R\), then: 
+	\[
+	\iint_{R}f(x,y)dA \geq \iint_{R}g(x,y)dA
+\] 
+\end{enumerate}
+
+Exercises:
+\begin{enumerate}
+	\item Let \(S = \{(x,y,z): 0 \leq z \leq xy \text{, }(x,y) \in R\}\) and \(R = [0,6] \times [0,4] \) Use \( m = 3\) and \( n = 2\) for the following.
+			\begin{enumerate}
+				\item Use a Riemann sum to estimate the volume of \(S\) by taking the sample point to be the upper right corner of each square
+				\item Use the midpoint Rule to estimate the volume of \(S\).
+			\end{enumerate}
+		\item Use geometry and \(R = [-2,3] \times  [0,1]\) to evaluate: 
+			\[
+				\iint_{R}(3-3y)dA
+			\]
+\end{enumerate}
 \end{document}
