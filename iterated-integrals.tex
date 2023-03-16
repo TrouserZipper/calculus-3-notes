@@ -39,17 +39,67 @@ If \(f\) is continuous on the rectangle \(R:[a,b] \times  [c,d]	\), then:
 	\iint_{R}f(x,y)dA = \int_{a}^{b} \int_{c}^{d} f(x,y)dydx = \int_{c}^{d} \int_{a}^{b} f(x,y)dxdy 
 \] 
 
-\subsubsection{Integrated Integrals Example 1} 
+\subsubsection{A special case}
+\[
+	f(x,y) = g(x)h(y)\text{, }R = [a,b]\times [c,d]
+\]
+\begin{align*}
+	\label{eq:Special Case}
+	\iint_{R}f(x,y)dA\\
+	= \int_{a}^{b} \int_{c}^{d} g(x)h(y)dydx\\
+	=\int_{a}^{b} g(x) \int_{c}^{d} h(y)dydx\\
+	=\int_{a}^{b} g(x)dx	\int_{c}^{d} h(y)dy
+\end{align*}
+
+\subsection{Iterated Integrals Examples}
+\subsubsection{ Example 1} 
 Evaluate: 
 \begin{enumerate}
 	\item \(\int_{1}^{2} \int_{0}^{3} xy^2dydx\)
 	\item \(\int_{0}^{3} \int_{1}^{2} xy^2dxdy\)
 \end{enumerate}
 
-\subsubsection{Integrated Integrals Example 2}
+\subsubsection{Example 2}
 Evaluate:
 \begin{enumerate}
 	\item \(\iint_{R}(y-3x^2)dA\), where \(R = [1,2] \times [0,2]\)
 	\item \(\iint_{R}x\sin(xy)dA\) where \(R = [0,\pi] \times [1,2]\)
+\end{enumerate}
+
+\subsubsection{Example 3}
+Find the volume of the solid \(S\) bounded by \(2x^2 + y^2 + z = 16,x=2,y=2, \text{ and }\) the three coordinate planes.
+
+\subsubsection{Example 4}
+Compute \(\iint_{R}\cos{x}\sin{y}dA\) where \(R = [0,\frac{\pi}{2}] \times  [0, \frac{\pi}{2}]\)
+
+\subsection{Iterated Integrals Exercises}
+\begin{enumerate}
+	\item Compute:
+		\begin{enumerate}
+			\item \[
+					\iint_{R}(2y-4x^3)dA;R = [0,3] \times  [-5,4]
+			\]
+			\begin{align*}
+				\label{eq:Solution A}
+				\iint_{R}(2y-4x^3)dA = \int_{0}^{3} \int_{-5}^{4} (2y-4x^3)dydx\\
+				= \int_{0}^{3} [y^2-4x^3y]\Big|_{-5}^3dx\\
+				= \int_{0}^{3} (16-16^3 - 25 -20x^3)dx\\
+				=\int_{0}^{3} (-36x^3 - 9)dx \\
+				= [-9x^4 - 9x]\Big|_0^3 = -756
+			\end{align*}
+			\item \[
+					\iint_{R}(x^2y^2 + \sin(\pi x) + \cos(\pi y))dA; R = [0,1] \times [-2,1]
+			\]
+			\begin{align*}
+				\label{eq:Solution B}
+			\iint_{R}(x^2y^2 + \sin(\pi x) + \cos(\pi y))dA \\
+				= \int_{0}^{1} \int_{-2}^{1} (x^2y^2 + \sin(\pi x) + \cos(\pi y))dydx \\
+				= \int_{0}^{1} [\frac{1}{3}x^2y^3 + y\sin(\pi x) - \frac{1}{\pi}\sin(\pi y)]\Big|_{-2}^1dx \\
+				= \int_{0}^{1} (\frac{5}{3}x^2 - \sin(\pi x))dx \\
+				= [\frac{5}{9}x^3 - \frac{1}{\pi}\cos(\pi x)]\Big|_0^1 \\
+				= \frac{5}{9} + \frac{2}{\pi}
+			\end{align*}
+		\end{enumerate}
+	\item Find the volume of the solid that lies under the plane \(2x+3y+z = 12\) and above the rectangle \(R = [-2,3] \times [0,1]\)
 \end{enumerate}
 \end{document}
