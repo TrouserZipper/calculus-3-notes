@@ -36,7 +36,7 @@ We have some solid \(S\):
 \]
 Let us imagine intervals inbetween \([a,b]\) are labeled \(x_0,x_1, \hdots x_{m-1}, x_m\) and inbetween \([c,d]\) are labeled \(y_0, y_1, y_2 \hdots y_{n-1}, y_n\)
 
-now \(R_{ij} = [x_j \) %incomplete
+now \(R_{ij} = [x_{ij},x_i] \times [y_{j-1},y_j] \) 
 
 \underline{Idea}\\
 Volume \[ = V \approx \sum_{i=1}^{m} \sum_{j=1}^{n} f(x_{ij} ^ *, y_{ij}^*) \triangle A\]
@@ -46,25 +46,29 @@ Volume \[ = V \approx \sum_{i=1}^{m} \sum_{j=1}^{n} f(x_{ij} ^ *, y_{ij}^*) \tri
 \]
 
 Which is the definition of the double integral: 
-\[\int_{}^{} \int_{}^{} f(x,y)dA\]
+\[\iint_{R}f(x,y)dA\]
 
 \subsubsection{Volumes and Double integrals Example 1}
+\(R = [0,2] \times [0,2] = \{(x,y): x\in[0,2] \text{ and } y \in [0,2]\}\)  \\
+\(z = f(x,y) = 16 - x^2 - 2y^2\)
+
+Approximate \(\iint_{R}f(x,y)dA\) using four equal squares in \(R\) and each sample point is the upper right corner.
 
 \subsubsection{Volumes and Double Integrals Example 2}
 Find: \[
-	\int_{}^{} \int_{}^{} \sqrt{1-x^2} dA \text{ where } R = [-1,1] \times [-2,2]
+	\iint_{R}\sqrt{1-x^2} dA \text{ where } R = [-1,1] \times [-2,2]
 \]
 
 \subsection{Midpoint Rule}
 \[
-	\int_{}^{} \int_{}^{} f(x,y)dA \approx \sum_{n=1}^{m} \sum_{n=1}^{n} f(\overline{x_i}, \overline{y_j})\triangle A
+	\iint_{R}f(x,y)dA \approx \sum_{i=1}^{m} \sum_{j=1}^{n} f(\overline{x_i}, \overline{y_j})\triangle A
 \]
 where \(\overline{x_i} = \frac{1}{2}(x_{i-1} + x_i)	\) and \(\overline{y_j} = \frac{1}{2}(y_{j-1} + y_i	\)
 
 \subsubsection{Midpoint Rule Example 1	}
 Midpoint Rule with \(m-n-2\)
 \[
-	\int_{}^{} \int_{}^{} (x - 3y^2)dA \text{ where } R = [0,2] \times [1,2]
+	\iint_{R}(x - 3y^2)dA \text{ where } R = [0,2] \times [1,2]
 \]
 
 \subsection{Average Value}
