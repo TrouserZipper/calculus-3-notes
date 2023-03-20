@@ -1,0 +1,77 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\counterwithin*{equation}{subsubsection}
+\addtolength\parskip{\bigskipamount}
+
+\graphicspath{ {./images/} } 
+
+\begin{document}
+\section{Double Integrals in Polar Coordinates}
+Polar Rectangle: \(R = \{(r,\theta): a \leq r \leq b \text{ and } \alpha \leq \theta \leq \beta\}\)
+
+To compute \(\iint_{R}f(x,y)dA\) where \(R\) is a polar rectangle, we will need to divide \(R\) into polar subrectangles.
+
+Divide \([a,b]\) into \(m\) subintervals \([r_{i-1},r_i]\) of equal width \(\triangle r = \frac{b-a}{m}\)
+
+Divide \([\alpha,\beta]\) into \(n\) subintervals \([\theta_{j-1},\theta_i]\) of equal width \(\triangle \theta = \frac{\beta - \alpha}{n}\)
+
+The area of a sub-rectangle:
+\[
+	R_{ij} = \{(r,\theta): r_{i-1} \leq r \leq r_i \text{ and } \theta_{j-1} \leq \theta \leq \theta_j\}
+\]
+
+\underline{Recall:} area \(A\) of a sector of a circle with radius \(r\) and sector angle \(\theta\) is: \[
+	A = \frac{1}{2}r^2\theta
+\]
+
+The area of \(R_{ij}\) is: 
+\begin{align*}
+	= \frac{1}{2} r^2_i \triangle \theta - \frac{1}{2}r^2_{i-1}\triangle \theta \\
+	= \frac{1}{2}(r^2_i - r^2_{i-1}) \triangle \theta \\
+	= \frac{1}{2}(r_i - r_{i-1}) (r_i + r_{i-1}) \triangle \theta \\
+	\triangle A_i = r_i^* \triangle r \triangle \theta
+\end{align*}
+
+If \(f\) is continuous, \(\iint_{R}f(x,y)dA\) may be found using polar coordinates.
+
+A typical Riemann Sum is: 
+\[
+	\sum_{i=1}^{m} \sum_{j = 1}^{n} f(x,y) \triangle A
+\]
+
+Rectangular coordinate conversion: 
+\begin{align*}
+	\label{eq:Conversions}
+	x  = r\cos\theta = r_i^*\cos \theta^*_j \\
+	y = r\sin\theta = r_i^*\sin \theta_j^*
+\end{align*}
+
+So, the Riemann Sum becomes:
+\[
+	\sum_{i = 1}^{m} \sum_{j = 1}^{n} f(r_i^*\cos \theta^*_j ,r_i^*\sin \theta_j^*) r_i^* \triangle r \triangle \theta 
+\]
+
+This is the definition of the integral 
+
+One may show that if \(f\) is continous on a polar rectangle \(R\)
+\[
+	R = \{(r,\theta): a\leq r \leq b \text{ and } \alpha \leq \theta \leq \beta \} 
+\]
+Then:
+\[
+	\iint_{R}f(x,y)dA = \int_{\alpha}^{\beta} \int_{a}^{b} f(r\cos\theta, r\sin\theta)rdrd\theta
+\]
+
+\subsubsection{Double Integrals over Polar Rectangles Example 1} 
+Evaluate \(\iint_{R}(3x - ry^2)dA\) where \(R\) is the region in the upper half-plane bounded by the circles \(x^2 + y^2 = 1\) and \(x^2 + y^2 = 4\).
+
+\subsubsection{Double Integrals over Polar Rectangles Example 2}
+Find the volume of the solid bounded by the \(xy\)-plane and the paraboloid \(z = 1-x^2 -y^2\).
+\end{document}
