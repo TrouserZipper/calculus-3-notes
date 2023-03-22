@@ -48,6 +48,15 @@ Likewise, when \(x=x_0\), we see \(z-z_0 = b(y-y_0)\), a very similar behaviour.
 
 \subsubsection{Tangent Planes Example 1}
 Find the tangent plane to \(z= x^2 + 2y^2\) at point \(P(1,1,3)\) 
+\begin{align}
+		f(x,y) = z = x^2 + 2y^2\\
+		f_x(x,y) = 2x \\
+		f_y(x,y) = 4y \\
+		\nonumber x_0 = 1, y_1 = 1, z_0 = 3\\
+		\nonumber f_x(1,1) = 2, f_y(1,1) = 4 \\
+\therefore		z - 3 = 2(x-1) + 4(y-1) \\
+		z = 2x + 4y - 3
+\end{align}
 
 \section{Linear Approximation}
 \underline{Linearization of \(f\) at \((x_0,y_0)\) }
@@ -99,7 +108,7 @@ As we know, the increment of a plane \(z=f(x,y)\), \(\triangle z\), is:
 
 If we alter the function to deal with the \(x\) and \(y\) axes independently, that is, fixing the \(x\) coordinate to find changes in the \(y\) axes and fixing the \(y\) coordinate to find changes in the \(x\) axes, we end up with:
 \begin{align}
-	\triangle z = [f(x_0 + \triangle x, y + \triangle y) - f(x_0,y_0 + \triangle y)] + \\ \nonumber[f(x_0,y_0+ \triangle y) - f(x_0,y_0)]
+	\triangle z = [f(x_0 + \triangle x, y_0 + \triangle y) - f(x_0,y_0 + \triangle y)] + \\ \nonumber[f(x_0,y_0+ \triangle y) - f(x_0,y_0)]
 \end{align}
 
 In this step, we use the additive identity (adding by 0) to find two functions which describe \(\triangle z\) as functions of \(\triangle x\) and \(\triangle y\) respectively.
