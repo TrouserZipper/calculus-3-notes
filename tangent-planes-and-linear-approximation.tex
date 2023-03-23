@@ -48,6 +48,15 @@ Likewise, when \(x=x_0\), we see \(z-z_0 = b(y-y_0)\), a very similar behaviour.
 
 \subsubsection{Tangent Planes Example 1}
 Find the tangent plane to \(z= x^2 + 2y^2\) at point \(P(1,1,3)\) 
+\begin{align}
+		f(x,y) = z = x^2 + 2y^2\\
+		f_x(x,y) = 2x \\
+		f_y(x,y) = 4y \\
+		\nonumber x_0 = 1, y_1 = 1, z_0 = 3\\
+		\nonumber f_x(1,1) = 2, f_y(1,1) = 4 \\
+\therefore		z - 3 = 2(x-1) + 4(y-1) \\
+		z = 2x + 4y - 3
+\end{align}
 
 \section{Linear Approximation}
 \underline{Linearization of \(f\) at \((x_0,y_0)\) }
@@ -99,7 +108,7 @@ As we know, the increment of a plane \(z=f(x,y)\), \(\triangle z\), is:
 
 If we alter the function to deal with the \(x\) and \(y\) axes independently, that is, fixing the \(x\) coordinate to find changes in the \(y\) axes and fixing the \(y\) coordinate to find changes in the \(x\) axes, we end up with:
 \begin{align}
-	\triangle z = [f(x_0 + \triangle x, y + \triangle y) - f(x_0,y_0 + \triangle y)] + \\ \nonumber[f(x_0,y_0+ \triangle y) - f(x_0,y_0)]
+	\triangle z = [f(x_0 + \triangle x, y_0 + \triangle y) - f(x_0,y_0 + \triangle y)] + \\ \nonumber[f(x_0,y_0+ \triangle y) - f(x_0,y_0)]
 \end{align}
 
 In this step, we use the additive identity (adding by 0) to find two functions which describe \(\triangle z\) as functions of \(\triangle x\) and \(\triangle y\) respectively.
@@ -199,7 +208,7 @@ when \((x,y)\) is near \((a,b)\)
 	dw=\frac{dw}{dx}dx + \frac{dw}{dy}dy + \frac{dw}{dz}dz
 \]
 \subsubsection{Linearization Example 1}
-The linearization of \(f(x,y)\) = \(x^2+2y^2\) at \(P(1,1,3)\) in \(L(x,y) = 2x+4y-3\) 
+The linearization of \(f(x,y)\) = \(x^2+2y^2\) at \(P(1,1,3)\) is \(L(x,y) = 2x+4y-3\) 
 
 \subsubsection{Linearization Example 2}
 Let \(f(x,y) = ye^{xy}\) \\
@@ -216,7 +225,35 @@ c) Compare \(dz\) and \(\triangle z\) for the changes above.
 \subsubsection{Linearization Example 4}
 We measure the radius and height of of a right circular cylinder as 10cm and 25cm, respectively.
 The possible error is at most 0.1cm for both measurements. Using differentials, approximate the maximum error in calculating the volume of the cylinder.
+\begin{align}
+	\nonumber L(x,y) = f(a,b) + dz \\
+ \nonumber V = h\pi r^2 \\
+	V = f(x,y) = y\pi x^2 = z\\
+	dz = f_x(a,b)(x - a) + f_y(a,b)(y-b) = f_x(a,b) \triangle x + f_y(a,b) \triangle y \\
+	dz = 2y\pi x dx + \pi x^2 dy \\
+	= 2(25)\pi (10) (0.1) + \pi (10^2) (0.1)  
+\end{align}
+\fbox{
+	\begin{minipage}{.75in}
+		\[
+		\approx 188.5 \text{cm}
+		\]
+	\end{minipage}
+}
 
 \subsubsection{Linearization Example 5}
 We measure a rectangular box to be 150cm, 120cm, and 80cm to within 0.2cm for each measurement. Using differentials, estimate the largest possible error when the volume of the box is calculated.
+\begin{align}
+	V = f(x,y,z) = xyz \\
+	dV = f_x(a,b,c)\triangle x + f_y(a,b,c) \triangle y + f_z(a,b,c) \triangle z\\
+	dV = yz \triangle x + xz \triangle y + xy \triangle z \\
+	dV = 120(80)(.2) + 150(80)(.2) + 150(120) (0.2) 
+\end{align}
+\fbox{
+	\begin{minipage}{1in}
+		\[
+			dV = 7920
+		\]
+	\end{minipage}
+}
 \end{document}

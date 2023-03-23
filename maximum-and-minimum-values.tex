@@ -37,7 +37,7 @@ We can say the same for \(f_y(a,b) = 0\), where \(h(y) = f(a,y)\). If \(f\) has 
 \subsection{Definition of Critical Points}
 A point \((a,b)\) is called a \underline{critical point} (stationary point) of \(f\)  if \(f_x(a,b) = 0\) and \(f_y(a,b) = 0\), or if one of those partial derivatives does not exist. 
 
-By extension, if you have a local max/min at \((a,b)\), you hvae a critical point at \((a,b)\). 
+By extension, if you have a local max/min at \((a,b)\), you have a critical point at \((a,b)\). 
 However, not all critical points yield a local extreme value.
 
 \subsection{Second Derivatives Test} 
@@ -85,7 +85,28 @@ Find the shortest distance from \(P(0,-2,1)\) to the plane \(2x + y + z = 4\).
 
 \subsubsection{Second Derivatives Test Example 3}
 Find the three positive numbers whose sum is \(150\) and whose product is a maximum.
-
+\begin{align}
+	\nonumber x + y + z = 150 \\
+	\nonumber z = 150 - x - y \\
+	f(x,y) = xy(150 - x - y) = 150xy -x^2y - xy^2 \\
+	f_x(x,y) = 150y - 2xy - y^2 = y(150 - 2x - y)\\
+	f_y(x,y) = 150x - x^2 - 2xy = x(150 - x - 2y)\\
+	\nonumber \text{From (2): } 150 - 2x - y = 0 \\
+	\nonumber \text{From (3): } x = 150 - 2y \\
+	y = 150 - 2x \\
+	\nonumber x = 150 - 300 + 4x \\	
+	\nonumber 3x = 150 \\
+	x = 50 \\
+	\nonumber \text{ From (4): } y = 150-2x = 50 \\
+	z = 150 - 50 - 50 = 50 
+\end{align}
+\fbox{
+	\begin{minipage}{2in}
+		\[
+			\therefore x = 50, y = 50, z = 50
+		\]
+	\end{minipage}
+}
 
 \subsection{Extreme Value Theorem}
 \underline{Review:} if \(f\) is continuous on \([a,b]\),\(\rightarrow  f\) has a max. and min. on \([a,b]\)  
@@ -123,6 +144,33 @@ Find the absolute max/min of a continuous function \(f\) on a closed and bounded
 \rule{\textwidth}{0.1mm}
 
 \subsubsection{Example 1}
-\(f(x,y) = y^2 - 2xy + 2x\), \(D = \{(x,y): 0 \leq x \leq z, 0 \leq y \leq 3\}\) \\
+\(f(x,y) = y^2 - 2xy + 2x\), \(D = \{(x,y): 0 \leq x \leq 2, 0 \leq y \leq 3\}\) \\
 Find extreme values of \(f\) on \(D\). 
+\begin{align}
+	f_x(x,y) = 2- 2y: y = 1 \\
+	f_y(x,y) = 2y - 2x: y = x = 1\\
+	\nonumber \text{Critical Point at \(f(1,1) = 1\)} \\
+\end{align}
+Solve for boundary points:
+\begin{align*}
+	f(0,0) = 0 \\
+	f(0,3) = 9 \\
+	f(2,0) = 4 \\
+	f(2,3) = 1
+\end{align*}
+Check determinant at critical point:
+\begin{align*}
+	D = f_{xx}(x,y)f_{yy}(x,y) - f_{xy}^2(x,y) \\
+	D = 0 - 2 = -2
+\end{align*}
+Saddle point at \(f(1,1) = 1\)
+
+\fbox{
+	\begin{minipage}{2.5in}
+		Absolute max. at \((0,3,9)\) \\
+		Absolute min. at \((0,0,0)\) \\
+		Saddle point at \((1,1,1)\)
+	\end{minipage}
+}
+
 \end{document}
