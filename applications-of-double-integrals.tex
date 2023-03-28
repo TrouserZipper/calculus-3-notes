@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\counterwithin*{equation}{subsubsection}
+\addtolength\parskip{\bigskipamount}
+
+\graphicspath{ {./images/} } 
+
+\begin{document}
+\section{Applications of Double Integrals}
+\subsection{Density and Mass}
+Picture: Lamina of unknown material with functions: \\
+\(\rho(x,y) = \) density at \((x,y)\) units of mass per unit area.
+\[
+	\rho(x,y) = \lim_{\triangle A \to 0} \frac{\triangle m}{\triangle A}
+\]
+\begin{itemize}
+	\item We want to find the total mass \(m\) of the lamina (a thin layer, plate, or scale of sedimentary rock, organic tissue, or other material
+	\item Define \(\rho(x,y)=0	\) outside of \(D\)
+	\item Choose a samplepoint \((x^{*}_{ij}, y^{*}_{ij})\) in \(R_{ij}\)
+	\item Use \(\triangle A = \) area of \(R_{ij} \Rightarrow \) mass of the lamina \(\approx \pi(x^{*}_{ij}, y^{*}_{ij})\triangle A\) in \(R_{ij}\)
+\end{itemize}
+
+An approximate total mass is: 
+\[
+	m \approx \sum_{i=1}^{k} \sum_{j = 1}^{l} \rho(x^{*}_{ij}, y^{*}_{ij})\triangle A
+\]
+
+If we take the limit as \(k, l \to \infty\), we get the definition of the integral:
+\[
+	m = \iint_{D}\rho(x,y)dA
+\]
+
+\subsection{Total Electric Charge}
+\(\sigma (x,y) = \) charge density at \((x,y)\) units of charge (measured in coulumbs) per unit of area
+
+Total charge \(= Q = \iint_{D}\sigma (x,y) dA	\) 
+\subsubsection{Total Electric Charge Example}
+\(\sigma (x,y) = xy C/m^{2}\) \\
+Region D: region bounded by \(y = 1-x, y=1, and x = 1\)
+
+\subsection{Moments and Centers of Mass}
+\begin{itemize}
+	\item Region \(D\) 
+	\item \(\rho (x,y) = \) density at \((x,y)\)
+	\item We define the moment of a paticle about an axis as the product of its mass and its directed distance from the axis.
+	\item The mass of \(R_{ij} \) is approximately \(\rho(x^{*}_{ij}, y^{*}_{ij}) \triangle A\)
+	\item the moment of \(R_{ij}\) with respect to the \(x\)-axis is approximately:  \\
+		\([\rho(x^{*}_{ij}, y^{*}_{ij}\triangle A] y^{*}_{ij}\)
+\end{itemize}
+\end{document}
+
