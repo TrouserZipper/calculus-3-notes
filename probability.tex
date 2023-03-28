@@ -1,0 +1,28 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\counterwithin*{equation}{subsubsection}
+\addtolength\parskip{\bigskipamount}
+
+\graphicspath{ {./images/} } 
+
+\begin{document}
+\section{Probability}
+\(P(a \leq x \leq b, c \leq y \leq d) = \int_{a}^{b} \int_{c}^{d} f(x,y)dydx\)
+
+\(x\) and \(y\) are trapped between two values \((a,b)\) and \((c,d)\) respectively.
+
+Since probabilities are non-negative and measured to be between \(0\) and \(1\), then the joint density function \(f\) satisfies:
+\begin{align*}
+	f(x,y) \geq 0, \text{for all } (x,y) \in \mathbb{R}^2 \\
+	\iint_{\mathbb{R}^2}f(x,y)dA = 1 \\
+	\int_{-\infty}^{\infty} \int_{\infty}^{\infty} f(x,y)dxdy = 1
+\end{align*}
+\end{document}
+

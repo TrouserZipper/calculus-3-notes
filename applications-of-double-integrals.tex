@@ -49,10 +49,39 @@ Region D: region bounded by \(y = 1-x, y=1, and x = 1\)
 \begin{itemize}
 	\item Region \(D\) 
 	\item \(\rho (x,y) = \) density at \((x,y)\)
-	\item We define the moment of a paticle about an axis as the product of its mass and its directed distance from the axis.
+	\item We define the moment of a particle about an axis as the product of its mass and its directed distance from the axis.
 	\item The mass of \(R_{ij} \) is approximately \(\rho(x^{*}_{ij}, y^{*}_{ij}) \triangle A\)
 	\item the moment of \(R_{ij}\) with respect to the \(x\)-axis is approximately:  \\
-		\([\rho(x^{*}_{ij}, y^{*}_{ij}\triangle A] y^{*}_{ij}\)
+		\([\rho(x^{*}_{ij}, y^{*}_{ij})\triangle A] y^{*}_{ij}\)
 \end{itemize}
-\end{document}
 
+\subsection{Moment of Inertia}
+The moment of inertia of a particle of mass \(m\) about an axis is defined to be  \(mr^2\), where \(r\) is the distance from the particle to the to the axis.
+
+We will extend this to a lamina with density function \(\rho(x,y)\) and occupying a region \(D\).
+
+Moment of Inertia about the \(x\)-axis:
+\[
+	I_x = \lim_{m,n \to \infty} \sum_{i=1}^{m} \sum_{n=j = 1}^{n} (y^{*}_{ij})\rho(x^{*}_{ij},y^{*}_{ij})\triangle A
+\]
+\[
+	I_x = \iint_{D}y^2 \rho(x,y) dA
+\]
+
+Moment of Inertia about the \(y\)-axis:
+\[
+	I_y = \iint_{D}x^2\rho(x,y)dA
+\]
+
+Moment of Inertia about the Origin:
+\[
+	I_0 = \iint_{D}(x^2 + y^{2})\rho(x,y)dA
+\]
+Note: \(I_0 = I_x + I_y\)
+\subsection{Applications of Double Integrals Examples}
+\subsubsection{Example 1}
+The density at any point on a semicircular lamina is proportional to the distance from the center of the circle. Find the center of mass of the lamina \(\rho(x,y)\).
+
+\subsubsection{Example 2}
+Find the moments of Inertia \(I_x, I_y,\) and \(I_0\) of a homogeneous disk \(D\) with density \(\rho(x,y) = \rho ,\) centre at the origin, and radius \(a\).
+\end{document}
