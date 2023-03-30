@@ -24,5 +24,68 @@ Since probabilities are non-negative and measured to be between \(0\) and \(1\),
 	\iint_{\mathbb{R}^2}f(x,y)dA = 1 \\
 	\int_{-\infty}^{\infty} \int_{\infty}^{\infty} f(x,y)dxdy = 1
 \end{align*}
-\end{document}
 
+\subsection{Independence}
+Suppose \(X\) and \(Y\) are random variables with probability density functions \(f_1(x)\) and \(f_2(x)\) respectively
+
+We may say that \(X\) and \(Y\) are \underline{independent random variables} if their joint probability density function is the product of their individual density functions:
+\[
+	f(x,y) = f_1(X) f_2(Y)
+\]
+
+\subsection{Expected Values}
+\underline{Recall:} Expected value is the mean \(\mu\)
+\[
+	\mu = \int_{-\infty}^{\infty} xf(x)dx
+\]
+
+For  \(X\) and \(Y\) being random variables with joint density function \(f\), we define the \(X\)-mean and \(Y\)-mean to be: 
+\[
+	\mu_1 = \iint_{\mathbb{R}^2}xf(x,y)dA
+\]
+and:
+\[
+	\mu_2 = \iint_{\mathbb{R}^2}yf(x,y)dA
+\]
+
+\begin{itemize}
+	\item We may relate probability to a continuously distributed mass.
+	\item We find probability by integrating a density function.
+\end{itemize}
+\underline{Idea:} \(\mu_1\) and \(\mu_2\) are the coordinates of the ``center of mass'' of the probability distribution.
+
+\subsection{Normal Distribution}
+Single-Variable:
+\[
+	f(x) = \frac{1}{\sigma\sqrt{2\pi}}e^{\frac{-(x-\mu)^2}{(2\sigma)^2}}
+\]
+\subsection{Probability Examples}
+\rule{\textwidth}{0.1mm}
+
+\subsubsection{Example 1}
+Suppose the joint density function for \(X\) and \(Y\) is:
+\[
+	f(x,y) = \begin{Bmatrix}
+		C(x + 2y), & \text{ if } x \in [0,10] \text{ and } y \in [0,10] \\
+		0, & otherwise
+	\end{Bmatrix}
+\]
+Find \(P( X \leq 7 \text{ and } Y \leq 2\)
+
+\subsubsection{Example 2}
+
+Waiting Times. We manage a movie theater and determine the average time movie goers wait in line to buy a ticket for this week's film is 10 minutes and the average time they wait to buy popcorn is 5 minutes.
+
+Assuming the waiting times are independent, find the probability that a movie goer waits a total of less than 20 minutes before taking his or her seat.
+
+\underline{Recall:} we model waiting times with exponential density functions.
+
+\subsubsection{Example 3}
+Bivariate Normal Joint Density
+
+A factory produces (cylindrical) bearings that are sold as having diameter \(4.0cm\) and length \(6.0cm\). In fact, the diameters \(X\) are normally distributed with mean \(4.0cm\) and standard deviation \(0.01cm\) while the lengths \(Y\) are normally distributed with mean \(6.0cm\) and standard deviation \(0.01cm\). 
+
+Assuming \(X\) and \(Y\) are independent, write the joint density function. \\
+Find the probability that a bearing randomly chosen from the production line has either length or diameter that differs from the mean by more than \(0.02cm\).
+
+\end{document}
