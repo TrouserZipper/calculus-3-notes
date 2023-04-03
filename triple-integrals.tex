@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+
+\counterwithin*{equation}{section}
+\counterwithin*{equation}{subsection}
+\counterwithin*{equation}{subsubsection}
+\addtolength\parskip{\bigskipamount}
+
+\graphicspath{ {./images/} } 
+
+\begin{document}
+\section{Triple Integrals}
+\subsection{Simple Case}
+Picture a box:
+\[
+	B = \begin{Bmatrix}
+		(x,y,z): a \leq x \leq b, c \leq y \leq d, r \leq z \leq s
+	\end{Bmatrix}
+\]
+The idea is:
+\[
+	\iiint_{E} f(x,y,z)dV
+\]
+Where \(f(x,y,z)\) is some mass/charge/probability density function.
+
+\begin{itemize}
+	\item Divide \([a,b]\) into \(l\) sub-intervals \([x_{i-1},x_i]\) of width \(\triangle x = \frac{b-a}{l}\)
+	\item Divide \([c,d]\) into \(m\) sub-intervals \([y_{j-1},y_j]\) of width \(\triangle y = \frac{d-c}{m}\)
+	\item Divide \([r,s]\) into \(n\) sub-intervals \([z_{k-1}, z_k]\) of which \(\triangle z = \frac{s-r}{n}\)
+	\item We get \(lmn\) sub-boxes with volume \(\triangle V = \triangle x \triangle y \triangle z\)
+\end{itemize}
+\[
+	B_{ijk} = [x_{i-1},x_i] \times [y_{j-1}, y_j] \times [z_{k-1},z_k]
+\]
+We want to approximate the \(ijk\)-th box, so:
+\begin{align*}
+	\sum_{i=1}^{l} \sum_{j=1}^{m} \sum_{k=1}^{n} f(x_{ijk}^{*},y^{*}_{ijk},j^{*}_{ijk}) \triangle V
+\end{align*}
+
+\subsection{Fubini's Theorem}
+If \(f\) is continuous on \(B= [a,b] \times [c,d] \times [r,s]	\),
+\[
+	\iiint_{B}f(x,y,z)dV = \int_{r}^{s}\int_{c}^{d}\int_{a}^{b}f(x,y,z)dxdydz
+\]
+
+\subsection{Evaluating over a General Region}
+Region \(E\)
+\[
+	\iiint_E f(x,y,z)dV = \iiint_E F(x,y,z)dV
+\]
+Inside \(E\), \(F = f\) \\
+Outisde \(E\), \(F = 0\)
+
+\subsubsection{Type 1 Region}
+\[
+	E = \begin{Bmatrix}
+		(x,y,z): (x,y) \in D, u_1(x,y) \leq z \leq u_2(x,y)
+	\end{Bmatrix}
+\]
+
+\begin{align*}
+	\iiint_E f(x,y,z) dV \\
+	= \iint_{D}\begin{bmatrix}\int_{u_1(x,y)}^{u_2(x,y)}f(x,y,z)dz\end{bmatrix}dA
+\end{align*}
+
+\subsubsection{Type 2 Region}
+\[
+	E = \begin{Bmatrix}
+		(x,y,z): (y,z) \in D, u_1(y,z) \leq x \leq u_2(y,z)
+	\end{Bmatrix}
+\]
+
+\subsubsection{Type 3 Region}
+\[
+	E = \begin{bmatrix} (x,y,z): (x,z) \in D, u_1(x,z) \leq y \leq u_2(x,z) \end{bmatrix} 
+\]
+\subsection{Triple Integral Examples}
+\rule{\textwidth}{0.1mm}
+
+\subsubsection{Example 1}
+Evaluate 
+\[
+	\iiint_{B} x^2yzdV
+\]
+where \(B = \)
+
+\subsubsection{Example 2}
+Evaluate 
+\[
+	\iiint_E zdV 
+\]
+where \(E\) is the solid tetrahedron bounded by the four planes: \(x = 0, y = 0, z = 0, x + y + z = 1\)
+
+\subsubsection{Example 3}
+Find \(\iiint_E \sqrt{x^2 + z^2} dV\) where \(E\) is the region bounded by: \\
+\( y = x^2 + z^2 \) and \( y = 4\)
+\end{document}
+
