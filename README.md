@@ -1,3 +1,6 @@
+# Calculus 3
+## Langara
+
 My calculus-3 notes in TeX language.\\
 I did not install any additional packages beyond what was already included in my LaTeX installation.
 
